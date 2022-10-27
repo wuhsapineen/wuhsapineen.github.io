@@ -10,5 +10,5 @@ Except where otherwise <a href="#">noted</a>, content on this site is licensed u
 
 
 <!-- Reference-Style Links -->
-[1]: (./Primary.md) "Primary"
+[1]: (Primary.md) "Primary"
 
