@@ -3,5 +3,5 @@
 -   [.][1]
 
 <!-- Reference-Style Links -->
-[1]: (./README.md) "README"
+[1]: (README.md) "README"
 
