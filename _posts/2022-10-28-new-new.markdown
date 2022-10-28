@@ -2,7 +2,7 @@
 layout: post
 title:  "New New!"
 date:   2022-10-28 11:42:31 +1000
-categories: news
+category: news
 ---
 It's an exciting day! Today marks the launch of wuhsapineen's GitHub Pages site and this is the very first post.
 
