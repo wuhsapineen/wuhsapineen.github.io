@@ -27,5 +27,3 @@ not real code
 
 end
 {% endhighlight %}
-
-{%- if site.copyright }
