@@ -2,7 +2,7 @@ title:
 email: 
 description:   
 domain: wuhsapineen.github.io
-baseurl: 
+baseurl: ""
 url: https://wuhsapineen.github.io
 markdown: GFM
 
