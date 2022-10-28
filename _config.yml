@@ -4,6 +4,7 @@ description:
 domain: 
 baseurl: wuhsapineen.github.io 
 url: https://wuhsapineen.github.io
+markdown: kramdown
 
 
 theme: minima
