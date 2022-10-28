@@ -1,3 +1,7 @@
+---
+layout: home
+
+---
 -   [.][1]
 
 <!-- Reference-Style Links -->
