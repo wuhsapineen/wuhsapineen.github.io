@@ -8,7 +8,13 @@ It's an exciting day! Today marks the launch of wuhsapineen's GitHub Pages site 
 
 Here, I'll be testing a few things to demonstrate how it's displayed on the site. We're currently running Jekyll using GitHub Flavored Markdown (GFM) processor as opposed to the default kramdown.
 
-CSS URL: {{ "/assets/style.css" | absolute_url }}
+CSS Absolute URL: {{ "/assets/style.css" | absolute_url }}
+Slugify "The _config.yml file": {{ "The _config.yml file" | slugify: "pretty" }}
+
+If statement:
+{%- if site.copyright -%}
+Except where otherwise noted, content on this site is licensed under the <a href="{{ site.copyright | 1 }}" target="_blank">{{ site.copyright | 2 }}</a>
+{%- endif -%}
 
 
 {% highlight markdown%}
@@ -22,3 +28,4 @@ not real code
 end
 {% endhighlight %}
 
+{%- if site.copyright }
