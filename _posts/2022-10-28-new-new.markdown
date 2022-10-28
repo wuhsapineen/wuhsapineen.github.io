@@ -11,12 +11,6 @@ Here, I'll be testing a few things to demonstrate how it's displayed on the site
 CSS Absolute URL: {{ "/assets/style.css" | absolute_url }}
 Slugify "The _config.yml file": {{ "The _config.yml file" | slugify: "pretty" }}
 
-If statement:
-{%- if site.copyright -%}
-Except where otherwise noted, content on this site is licensed under the <a href="{{ site.copyright | first }}" target="_blank">{{ site.copyright | last }}</a>
-{%- endif -%}
-
-
 {% highlight markdown%}
 Some code block
 actual words
