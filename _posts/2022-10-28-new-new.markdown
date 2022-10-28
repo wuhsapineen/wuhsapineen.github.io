@@ -11,7 +11,7 @@ Here, I'll be testing a few things to demonstrate how it's displayed on the site
 CSS URL: {{ "/assets/style.css" | absolute_url }}
 
 
-{% highlight %}
+{% highlight markdown%}
 Some code block
 actual words
 
