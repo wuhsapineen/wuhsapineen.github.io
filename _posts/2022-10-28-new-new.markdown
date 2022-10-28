@@ -13,7 +13,7 @@ Slugify "The _config.yml file": {{ "The _config.yml file" | slugify: "pretty" }}
 
 If statement:
 {%- if site.copyright -%}
-Except where otherwise noted, content on this site is licensed under the <a href="{{ site.copyright | 1 }}" target="_blank">{{ site.copyright | 2 }}</a>
+Except where otherwise noted, content on this site is licensed under the <a href="{{ site.copyright | first }}" target="_blank">{{ site.copyright | last }}</a>
 {%- endif -%}
 
 
