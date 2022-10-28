@@ -13,3 +13,17 @@
     --main-blue-dark: #284f71;
 }
 
+#m80-button {
+    border-radius: 18px;
+    padding: 3px, 12px;
+    background-image: linear-gradient(
+        var(--main-silver-light),
+        var(--main-silver-dark)
+    );
+}
+#m80-button:hover {
+    background-image: linear-gradient(
+        var(--main-blue-light),
+        var(--main-blue-dark)
+    );
+}
