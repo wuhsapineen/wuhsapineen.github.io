@@ -1,0 +1,15 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Color scheme
+:root {
+    --main-white-light: #ffffff;
+    --main-white-dark: #cccccc;
+    --main-silver-light: #cfd2da;
+    --main-silver-dark: #798797;
+    --main-blue-light: #689eca;
+    --main-blue-dark: #284f71;
+}
+
