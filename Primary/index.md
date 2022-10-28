@@ -11,11 +11,8 @@ reference:
 
 # Games - All Notes - Primary
 
-> ## Excerpt
-> 
-
 ---
-![Games Notes](./images/games-notes.png)
+![Games Notes](./../images/games-notes.png)
 
 Table of Contents
 
