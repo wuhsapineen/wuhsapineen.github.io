@@ -24,10 +24,14 @@ Table of Contents
 1.  [Games On C:\\][4]
 
 
-# 1. Techtonica <span id="techtonica"> </span>
+<span id="techtonica"> </span>
+
+# 1. Techtonica 
 Some text here about things related to Techtonica
 
-## ToDo <span id="techtonica_todo"></span>
+<span id="techtonica_todo"></span>
+
+## ToDo 
 -   Build assemblers
     -   Floors
     -   Inserters
@@ -38,13 +42,17 @@ To Be Continued...
 . 
 
 ---
-# Destiny 2 <span id="destiny_2"></span>
+<span id="destiny_2"></span>
+
+# Destiny 2 
 Some text here about things related to Destiny 2
 
 . 
 
 ---
-# Space Engineers <span id="space_engineers"></span>
+<span id="space_engineers"></span>
+
+# Space Engineers 
 Some text here about things related to Space Engineers
 
 #### Space Engineers Colors
