@@ -5,6 +5,7 @@ domain: wuhsapineen.github.io
 baseurl: ""
 url: https://wuhsapineen.github.io
 markdown: GFM
+copyright: [https://creativecommons.org/publicdomain/zero/1.0/, Creative Commons Zero v1.0 Universal]
 
 
 theme: minima
