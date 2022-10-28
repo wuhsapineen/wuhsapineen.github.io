@@ -1,8 +1,8 @@
 title: 
 email: 
 description:   
-domain: 
-baseurl: wuhsapineen.github.io 
+domain: wuhsapineen.github.io
+baseurl: 
 url: https://wuhsapineen.github.io
 markdown: kramdown
 
