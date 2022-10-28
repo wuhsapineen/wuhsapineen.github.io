@@ -1,8 +1,9 @@
 ---
+title: Games - All Notes - Primary
 created: 2022-10-28T06:02:00 (UTC +9:00)
 tags: 
 source: 
-author: Michael Cannon
+author: wuhsapineen
 reference:
 - []
 
