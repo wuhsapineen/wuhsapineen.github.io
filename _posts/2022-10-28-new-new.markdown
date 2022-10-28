@@ -5,12 +5,19 @@ date:   2022-10-28 11:42:31 +1000
 category: news
 ---
 It's an exciting day! Today marks the launch of wuhsapineen's GitHub Pages site and this is the very first post.
-
 Here, I'll be testing a few things to demonstrate how it's displayed on the site. We're currently running Jekyll using GitHub Flavored Markdown (GFM) processor as opposed to the default kramdown.
 
 CSS Absolute URL: {{ "/assets/css/style.scss" | absolute_url }}
 
 Slugify "The _config.yml file": {{ "The _config.yml file" | slugify: "pretty" }}
+
+Categories: {% assign all_categories = site.posts | map: "category" %}
+
+{% for item in all_categories %}
+- {{ item }}
+{% endfor %}
+
+XML Schema Date: {{ site.time | date_to_xmlschema }}
 
 {% highlight markdown%}
 .Some: "code";
