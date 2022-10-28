@@ -8,16 +8,18 @@ It's an exciting day! Today marks the launch of wuhsapineen's GitHub Pages site 
 
 Here, I'll be testing a few things to demonstrate how it's displayed on the site. We're currently running Jekyll using GitHub Flavored Markdown (GFM) processor as opposed to the default kramdown.
 
-CSS Absolute URL: {{ "/assets/style.css" | absolute_url }}
+CSS Absolute URL: {{ "/assets/css/style.scss" | absolute_url }}
+
 Slugify "The _config.yml file": {{ "The _config.yml file" | slugify: "pretty" }}
 
 {% highlight markdown%}
-Some code block
-actual words
+.Some: "code";
+ActualWords() {
 
-not real code
-    but still pretty
-    looking
-
-end
+    notRealCodeBlock() {
+        but = still pretty
+        looking;
+    };
+};
+end;
 {% endhighlight %}
