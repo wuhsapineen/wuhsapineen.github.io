@@ -8,9 +8,6 @@ reference:
 - []
 
 ---
-# Games - All Notes - Primary
-
----
 ![Games Notes](./../images/games-notes.png)
 
 Table of Contents
@@ -18,7 +15,7 @@ Table of Contents
 1.   [Techtonica][1]
         -   [ToDo][1-1]
         -   Another Section
-1.   [Destiny 2][2]
+1.  [Destiny 2][2]
 1.  [Space Engineers][3]
 1.  [Games On C:\\][4]
 
@@ -54,9 +51,26 @@ Some text here about things related to Destiny 2
 # Space Engineers 
 Some text here about things related to Space Engineers
 
+#### ToDo
+-   Some Task
+
+### Notes:
+
+#### Laser Antennae
+-   **__New World__**
+    -   __LA-01__
+        -   GPS:LA-01:-79292.76:-25700.44:67608.45:
+    -   LA-02
+        -   GPS:LA-02:-79290.13:-25700.46:67609.89:
+    -   LA-Earth01
+        -   GPS:LA-Earth01:-44587.08:-345.25:41468.91:
+    -   LA-SpaceStation01
+        -   GPS:LA-SpaceStation01:-84470.04:-29839.42:73006.27:
+
 #### Space Engineers Colors
 -   Light Blue: #3368B8
 -   Dark Blue: #112F5C
+
 
 .
 
