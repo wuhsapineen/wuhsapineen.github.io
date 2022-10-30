@@ -57,8 +57,8 @@ Some text here about things related to Space Engineers
 ### Notes:
 
 #### Laser Antennae
--   **__New World__**
-    -   __LA-01__
+-   **New World**
+    -   LA-01
         -   GPS:LA-01:-79292.76:-25700.44:67608.45:
     -   LA-02
         -   GPS:LA-02:-79290.13:-25700.46:67609.89:
@@ -70,6 +70,8 @@ Some text here about things related to Space Engineers
 #### Space Engineers Colors
 -   Light Blue: #3368B8
 -   Dark Blue: #112F5C
+
+#### Other
 
 
 .
