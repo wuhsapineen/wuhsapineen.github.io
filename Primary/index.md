@@ -1,5 +1,5 @@
 ---
-title: Games - All Notes - Primary
+title: All Notes
 created: 2022-10-28T06:02:00 (UTC +9:00)
 tags: 
 source: 
@@ -8,7 +8,11 @@ reference:
 - []
 
 ---
+<br />
+
 ![Games Notes](./../images/games-notes.png)
+
+# All Games Notes
 
 Table of Contents
 
@@ -19,12 +23,24 @@ Table of Contents
 1.  [Space Engineers][3]
 1.  [Games On C:\\][4]
 
+---
 
+<br />
+<span id="city-of-heroes"></span>
+
+# 1. City of Heroes
+## Characters
+-   Avatar of Antares
+    -   Enhancements:
+        <div id="enhancements_avatarofantares"></div>
+
+<br />
 <span id="techtonica"> </span>
 
 # 1. Techtonica 
 Some text here about things related to Techtonica
 
+<br />
 <span id="techtonica_todo"></span>
 
 ## ToDo 
@@ -37,7 +53,7 @@ To Be Continued...
 
 . 
 
----
+<br />
 <span id="destiny_2"></span>
 
 # Destiny 2 
@@ -45,7 +61,7 @@ Some text here about things related to Destiny 2
 
 . 
 
----
+<br />
 <span id="space_engineers"></span>
 
 # Space Engineers 
@@ -76,7 +92,9 @@ Some text here about things related to Space Engineers
 
 .
 
----
+<br />
+<span id="games_on_c"></span>
+
 # Games On C:\
 
 ### Steam
