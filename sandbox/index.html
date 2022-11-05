@@ -7,7 +7,8 @@ ul {
 	list-style-type:none; 
     margin: 0px 0px 0px -35px;
 }
-.enhancement { max-width: 90px; }
+.enhancement {  }
+.warning { font-style: italic; }
 .quantity { max-width: 35px; }
 
 </style>
@@ -45,14 +46,7 @@ var arrayEnhancements = {
         ["tohit_debuff","To Hit Debuff"],
         ]
 };
-var arrayDisplayed = {
-	"COLUMNS": [
-    	"ENH_VALUE",
-        "ENH_NAME",],
-	"DATA": [
-    	["intangibility","Intangibility"]
-    ]
-}
+var arrayDisplayed = ["Damage"];
 </script>
 </head>
 <body>
@@ -81,14 +75,19 @@ var arrayDisplayed = {
 </form>
 <br />
 <br />
-<div id="results"></div>
-<div id="test"></div>
-<div id="test2"></div>
+<div id="ToDo">
+<h3>To do:</h3>
+<ul>
+<li>Option to export JSON data</li>
+<li>Option to save JSON data to local drive</li>
+</ul>
+</div>
 <br />
 
 <script type="text/javascript">
 // --- test ---
 const divTest = document.getElementById("test");
+const divResults = document.getElementById("results");
 // --- endtest ---
 
 	// Declare variables
@@ -121,7 +120,7 @@ const divTest = document.getElementById("test");
         // select list
         const ulParent = document.getElementById("ulEnhancementSlots");
         // set list item contents
-        var newEditLine = '<select id="selectEnhancement_' + id + '" class="enhancement"><option selected="true">Enhancements</option></select> <input type="number" id="quantity_' + id + '" class="quantity" name="quantity" min="1" max="99" maxlength="2" value="1" /> <input type="button" onclick="enhancementSave(' + id + ')" value="Save" /> <input type="button" onclick="enhancementRemove(' + id + ')" value="Remove" /> <span id="warning_' + id + '"></span><br />\n';
+        var newEditLine = '<select id="selectEnhancement_' + id + '" class="enhancement"><option selected="true">Enhancements</option></select> <input type="number" id="quantity_' + id + '" class="quantity" name="quantity" min="1" max="99" maxlength="2" value="1" /> <input type="button" onclick="enhancementSave(' + id + ')" value="Save" /> <input type="button" onclick="enhancementRemove(' + id + ')" value="Remove" /> <span id="warning_' + id + '" class="warning"></span><br />\n';
         // create new list item
         var newLi = document.createElement("li");
         // set list item id
@@ -140,39 +139,27 @@ const divTest = document.getElementById("test");
         // get input values
         var dropdown = document.getElementById("selectEnhancement_" + id);
         var number = document.getElementById("quantity_" + id);
+        var enhIndex = dropdown.selectedIndex;
         var enhName = dropdown.options[dropdown.selectedIndex].text;
         var enhValue = dropdown.options[dropdown.selectedIndex].value;
         var enhQty = number.value;
-        // --- test ---
-        document.getElementById("results").innerHTML = "Save<br />enhName: " + enhName + "<br />enhValue: " + enhValue + "<br />enhQty: " + enhQty;
-        var arr = arrayDisplayed.DATA;
-        var text = "";
-		var enhString = [enhValue,enhName];
-        for (let x in arr) { 
-        	if (!arr[x].includes(enhString)) { 
-            	text = "Not includes!"; 
-                arr.push(enhString);
-            }
-            else { 
-            	//arr.push(['"' + enhValue + '","' + enhName + '"']);
-                text = "Includes!";
-                //divTest.innerHTML = enhString;
-            }
+        
+        // check if enhancement is already saved
+		if (arrayDisplayed.includes(enhName)) { 
+        	// write warning at right of line that enhancement is already used
+            var warning = document.getElementById("warning_" + id).innerHTML = " ! - Enhancement already slotted.";
 		}
-        divTest.innerHTML = text;
-        // --- endtest ---
         
-        // set list item contents (savedLine)
-        var savedLine = '<span id="enhName">' + enhName + '</span><span id="enhValue" hidden="true">' + enhValue + '</span> (<span id="enhQty">' + enhQty + '</span>) <input type="button" onclick="enhancementEdit(' + id + ')" value="Edit" /> <input type="button" onclick="enhancementRemove(' + id + ')" value="Remove" /><br />\n';
-        // get list item to modify
-        var modifyLi = document.getElementById(id);
-        // if enhancement not already used (enhancement not in arrayDisplayed.DATA):
-        // replace contents of list item (id) with input values
-		modifyLi.innerHTML = savedLine;
-        // add ["enhValue","enhName"] to array of used enhancements
-		// else
-        // write warning at right of line that enhancement is already used
-        
+	   	else { 
+			// set list item contents (savedLine)
+       		var savedLine = '<span id="enhIndex_' + id + '" hidden="true">' + enhIndex + '</span><span id="enhName_' + id + '">' + enhName + '</span><span id="enhValue_' + id + '" hidden="true">' + enhValue + '</span> (<span id="enhQty_' + id + '">' + enhQty + '</span>) <input type="button" onclick="enhancementEdit(' + id + ')" value="Edit" /> <input type="button" onclick="enhancementRemove(' + id + ')" value="Remove" /><br />\n';
+       		// get list item to modify
+       		var modifyLi = document.getElementById(id);
+       		// replace contents of list item (id) with input values
+			modifyLi.innerHTML = savedLine;                
+			// add entry to array of displayed enhancements
+        	arr.push(enhName);
+		}
     }
     
     function enhancementRemove(id) {
@@ -185,14 +172,20 @@ const divTest = document.getElementById("test");
     }
     
     function enhancementEdit(id) {
-    	// get enhName
-        var enhName = document.getElementById("enhName");
-        // get enhValue
-        var enhValue = document.getElementById("enhValue");
+    	// get enhIndex
+        var enhIndex = document.getElementById("enhIndex_" + id).innerHTML;
         // get enhQty
-        var enhQty = document.getElementById("enhQty");
-        // loop through enhancements searching for value to return the index
-        // display the newEditLine
+        var enhQty = document.getElementById("enhQty_" + id).innerHTML;
+        // set list item contents
+        var editLine = '<select id="selectEnhancement_' + id + '" class="enhancement"><option selected="true">Enhancements</option></select> <input type="number" id="quantity_' + id + '" class="quantity" name="quantity" min="1" max="99" maxlength="2" value="1" /> <input type="button" onclick="enhancementSave(' + id + ')" value="Save" /> <input type="button" onclick="enhancementRemove(' + id + ')" value="Remove" /> <span id="warning_' + id + '" class="warning"></span><br />\n';
+        // modify list item
+        document.getElementById(id).innerHTML = editLine;
+        // populate select input
+        enhancementPopulate(id);
+        // select the appropriate enhancement
+        var dropdown = document.getElementById("selectEnhancement_" + id).selectedIndex = enhIndex;
+        // set quantity in number input
+        var qty = document.getElementById("quantity_" + id).value = enhQty;
     }
     
 
