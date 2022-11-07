@@ -2,7 +2,7 @@
 title: Applications
 description: All Notes - Applications
 created: 2022-11-08T04:39:00 (UTC +9:00)
-tags: notes, applications, projects
+tags: pages, notes, applications, projects
 source: 
 author: wuhsapineen
 reference:
