@@ -17,6 +17,7 @@ plugins:
 
 exclude:
   - .hidden/
+  - README.md
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
