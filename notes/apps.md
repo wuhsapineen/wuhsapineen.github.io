@@ -1,7 +1,7 @@
 ---
 title: Applications
 description: All Notes - Applications
-created: 2022-11-08T04:39:00 (UTC +9:00)
+created: 2022-11-08 04:39:00 +1000
 tags: pages, notes, applications, projects
 source: 
 author: wuhsapineen
@@ -26,6 +26,7 @@ Table of Contents
 -->
 
 <br />
+<!-- ------ section border ------ -->
 <span id="on-screen_reticle"></span>
 
 # On-screen Reticle
@@ -39,6 +40,7 @@ Some text here about things related to On-screen Reticle application
 . 
 
 <br />
+<!-- ------ section border ------ -->
 <span id="stopwatch-timer"></span>
 
 # Stopwatch / Timer
