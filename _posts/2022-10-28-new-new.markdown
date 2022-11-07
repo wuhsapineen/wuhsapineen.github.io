@@ -7,7 +7,7 @@ category: news
 It's an exciting day! Today marks the launch of wuhsapineen's GitHub Pages site and this is the very first post.
 Here, I'll be testing a few things to demonstrate how it's displayed on the site. We're currently running Jekyll using GitHub Flavored Markdown (GFM) processor as opposed to the default kramdown.
 
-Sitemap Absolute URL: {{ "sitemap.md" | absolute_url }}
+Sitemap Absolute URL: {{ "/sitemap/" | absolute_url }}
 
 Slugify "The _config.yml file": {{ "The _config.yml file" | slugify: "pretty" }}
 
