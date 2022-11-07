@@ -111,6 +111,18 @@ Some text here about things related to Space Engineers
 .
 
 <br />
+<span id="games-other" hidden="true">998</span>
+
+# Other
+
+### Sub-section
+-   Trade profit formula
+    -   **Sqrt(0) x [ 1 + Sqrt(0)/75 + Sqrt(0)/10 ] = 0 cred./h**
+    -   *(Sqrt(min. Income) x [ 1 + Sqrt(Distance)/75 + Sqrt(Players)/10 ])*
+
+
+.
+<br />
 <span id="games_on_c" hidden="true">999</span>
 
 # Games On C:\
