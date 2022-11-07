@@ -2,7 +2,7 @@
 title: Games
 description: All Notes - Games
 created: 2022-10-28T06:02:00 (UTC +9:00)
-tags: notes, games
+tags: pages, notes, games
 source: 
 author: wuhsapineen
 reference:
@@ -17,12 +17,12 @@ reference:
 
 Table of Contents
 
-1.  [City of Heroes][5]
+1.  [City of Heroes][4]
 1.   [Techtonica][1]
         -   [ToDo][1-1]
 1.  [Destiny 2][2]
 1.  [Space Engineers][3]
-1.  [Games On C:\\][4]
+1.  [Games On C:\\][999]
 
 ---
 {% javascript %}
@@ -30,18 +30,21 @@ Table of Contents
 {% endjavascript %}
 
 <br />
-<span id="city-of-heroes"></span>
+<span id="city-of-heroes" hidden="true">1</span>
 
-# 1. City of Heroes
+# City of Heroes
 ## Characters
 -   Avatar of Antares
     -   Enhancements:
         <div id="enhancements_avatarofantares"></div>
+-   Links
+    -   [Homecoming Wiki][]
+    -   [Badger][]
 
 <br />
-<span id="techtonica"> </span>
+<span id="techtonica" hidden="true">2</span>
 
-# 2. Techtonica 
+# Techtonica 
 Some text here about things related to Techtonica
 
 <br />
@@ -58,7 +61,7 @@ To Be Continued...
 . 
 
 <br />
-<span id="destiny_2"></span>
+<span id="destiny_2" hidden="true">3</span>
 
 # Destiny 2 
 Some text here about things related to Destiny 2
@@ -66,7 +69,7 @@ Some text here about things related to Destiny 2
 . 
 
 <br />
-<span id="space_engineers"></span>
+<span id="space_engineers" hidden="true">4</span>
 
 # Space Engineers 
 Some text here about things related to Space Engineers
@@ -108,7 +111,7 @@ Some text here about things related to Space Engineers
 .
 
 <br />
-<span id="games_on_c"></span>
+<span id="games_on_c" hidden="true">999</span>
 
 # Games On C:\
 
@@ -148,5 +151,5 @@ Some text here about things related to Space Engineers
 [3-3]: #SE-laserantennae
 [3-4]: #SE-colors
 [3-5]: #SE-other
-[4]: #games-on-c "Games on C drive"
-[5]: #1-city-of-heroes
+[4]: #1-city-of-heroes
+[999]: #games-on-c "Games on C drive"
