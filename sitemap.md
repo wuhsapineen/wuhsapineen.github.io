@@ -8,6 +8,7 @@ author: wuhsapineen
 reference:
 - []
 
+permalink: /sitemap/
 ---
 <br />
 
