@@ -6,7 +6,7 @@ baseurl: ""
 url: https://wuhsapineen.github.io
 markdown: GFM
 
-sitemap: ./sitemap.md
+sitemap: true
 copyright: [https://creativecommons.org/publicdomain/zero/1.0/, Creative Commons Zero v1.0 Universal]
 show_excerpts: true
 
