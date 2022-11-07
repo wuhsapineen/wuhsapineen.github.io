@@ -19,11 +19,6 @@ Table of Contents
 1.  [Stopwatch/Timer][2]
 
 ---
-<!--
-{% javascript %}
-
-{% endjavascript %}
--->
 
 <br />
 <!-- ------ section border ------ -->

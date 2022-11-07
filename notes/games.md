@@ -25,9 +25,6 @@ Table of Contents
 1.  [Games On C:\\][999]
 
 ---
-{% javascript %}
-
-{% endjavascript %}
 
 <br />
 <!-- ------ section border ------ -->

@@ -19,12 +19,6 @@ reference:
 1.  [Games][2]
 1.  [How-To][3]
 
-<!--
-{% javascript %}
-
-{% endjavascript %}
--->
-
 
 <!-- reference-links -->
 [1]: apps.md

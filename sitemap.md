@@ -25,11 +25,6 @@ reference:
     -   [New New][nav-posts-newnew]
 -   Sitemap *(you are here)*
 
-<!--
-{% javascript %}
-
-{% endjavascript %}
--->
 
 <!-- reference-links -->
 [nav-home]: /index.md

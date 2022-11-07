@@ -19,11 +19,6 @@ Table of Contents
 1.  [Item 2][2]
 
 ---
-<!--
-{% javascript %}
-
-{% endjavascript %}
--->
 
 <br />
 <span id="item1" hidden="true">1</span>
