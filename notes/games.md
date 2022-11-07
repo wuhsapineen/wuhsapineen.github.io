@@ -1,7 +1,7 @@
 ---
 title: Games
 description: All Notes - Games
-created: 2022-10-28T06:02:00 (UTC +9:00)
+created: 2022-10-28 06:02:00 +1000
 tags: pages, notes, games
 source: 
 author: wuhsapineen
@@ -30,6 +30,7 @@ Table of Contents
 {% endjavascript %}
 
 <br />
+<!-- ------ section border ------ -->
 <span id="city-of-heroes" hidden="true">1</span>
 
 # City of Heroes
@@ -42,6 +43,7 @@ Table of Contents
     -   [Badger][]
 
 <br />
+<!-- ------ section border ------ -->
 <span id="techtonica" hidden="true">2</span>
 
 # Techtonica 
@@ -61,25 +63,30 @@ To Be Continued...
 . 
 
 <br />
+<!-- ------ section border ------ -->
 <span id="destiny_2" hidden="true">3</span>
 
 # Destiny 2 
 Some text here about things related to Destiny 2
 
+## <span id="Des-notes">Notes</span>
+-   Tasks
+
 . 
 
 <br />
+<!-- ------ section border ------ -->
 <span id="space_engineers" hidden="true">4</span>
 
 # Space Engineers 
 Some text here about things related to Space Engineers
 
-#### <span id="SE-todo">ToDo</span>
+## <span id="SE-todo">ToDo</span>
 -   Some Task
 
-### <span id="SE-notes">Notes:</span>
+## <span id="SE-notes">Notes</span>
 
-#### <span id="SE-laserantennae">Laser Antennae</span>
+### <span id="SE-laserantennae">Laser Antennae</span>
 -   **New World**
     -   LA-01
         -   GPS:LA-01:-79292.76:-25700.44:67608.45:
@@ -96,7 +103,7 @@ Some text here about things related to Space Engineers
     -   LA-CommsRelay-01
         -   GPS:LA-CommsRelay-01:-85342.88:-31536.17:70167.53:
 
-#### <span id="SE-colors">Colors</span>
+### <span id="SE-colors">Colors</span>
 
 -   **Blocks:**
     -   Light Blue: #3368B8
@@ -105,17 +112,18 @@ Some text here about things related to Space Engineers
     -   Light Blue (Lights): RGB(180,215,255)
     -   Dark Blue (Display BG): RGB(3,9,15)
 
-#### <span id="SE-other">Other</span>
+### <span id="SE-other">Other</span>
 
 
 .
 
 <br />
+<!-- ------ section border ------ -->
 <span id="games-other" hidden="true">998</span>
 
 # Other
 
-### Sub-section
+## Sub-section
 -   Trade profit formula
     -   **Sqrt(0) x [ 1 + Sqrt(0)/75 + Sqrt(0)/10 ] = 0 cred./h**
     -   *(Sqrt(min. Income) x [ 1 + Sqrt(Distance)/75 + Sqrt(Players)/10 ])*
@@ -123,11 +131,12 @@ Some text here about things related to Space Engineers
 
 .
 <br />
+<!-- ------ section border ------ -->
 <span id="games_on_c" hidden="true">999</span>
 
 # Games On C:\
 
-### Steam
+## Steam
 - No Man's Sky
 - Shapez.io
 - Civitatem
@@ -143,7 +152,7 @@ Some text here about things related to Space Engineers
 - Stardew Valley
 - stein.world
 
-### Origin
+## Origin
 - Command & Conquer: Red Alert 2
 - Command & Conquer 3
 - Command & Conquer: Tiberian Sun
