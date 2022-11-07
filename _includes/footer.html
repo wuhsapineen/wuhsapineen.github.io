@@ -9,7 +9,7 @@
       <div class="footer-col footer-col-1">
         <ul class="footer-nav">
             {%- if site.sitemap -%}
-            <li>{{ link /sitemap/ }}</li>
+            <li><a href="{{ '/sitemap/' | absolute_url }}"></li>
             {%- endif -%}
         </ul>
       </div>
