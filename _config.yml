@@ -14,7 +14,8 @@ plugins:
   - jekyll-feed
 
 
-# exclude:
+exclude:
+    - .hidden/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
