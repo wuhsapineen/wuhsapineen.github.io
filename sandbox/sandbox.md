@@ -1,7 +1,7 @@
 ---
 title: Sandbox
 description: Playground for testing code
-created: 2022-11-08T05:14:00 (UTC +9:00)
+created: 2022-11-08 05:14:00 +1000
 tags: notes, games
 source: 
 author: wuhsapineen
