@@ -19,8 +19,12 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
+      <div class="footer-col footer-col-2">        
+        <p><ul class="footer-nav">
+          {%- if site.sitemap -%}
+            <li><a href="{{ site.sitemap }}">Sitemap</a></li>
+          {%- endif -%}
+        </ul></p>
       </div>
 
       <div class="footer-col footer-col-3">
