@@ -47,7 +47,9 @@ Some text here about things related to Stopwatch/Timer application
 -   Description
 -   How-to
 -   Todo
-    -   Full clock (24-hour, leading zeros, hour:minute:second) gui with small date in one of the corners slightly dim; white numbers on a black background
+    -   Full clock (24-hour, leading zeros, hour:minute:second) gui with white numbers on a black background
+    -   Small date in one of the corners slightly dim
+    -   GMT offset
 -   Images
 
 <!-- Reference Style Links -->
