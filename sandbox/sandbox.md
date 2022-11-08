@@ -10,9 +10,6 @@ reference:
 - []
 
 ---
-<!DOCTYPE html>
-<html>
-<head>
 <style type="text/css">
 #formEnhancementSlots { line-height: 1.8; }
 ul { 
@@ -60,8 +57,8 @@ var arrayEnhancements = {
 };
 var arrayDisplayed = [];
 </script>
-</head>
-<body>
+
+[![](https://mermaid.ink/img/pako:eNpNj7sOgzAMRX8l8gQSHfqYsrZrJzaUxSVuG7W2UUiGCvHvDbDg6ej4WrYn6NUTWOAgnnFwYkxUTVV1RRGVul6MMW0iNseNl6ra_DiMq9wnTjs-7_gCDTBFxuDLrmnpOEhvYnJgC3qMHwdO5pLDnLT9SQ82xUwN5MFjolvAV0QG-8TvWCz5kDTet-PXHxoYUDpV3gbnP0xORIs?type=png)](https://mermaid.live/edit#pako:eNpNj7sOgzAMRX8l8gQSHfqYsrZrJzaUxSVuG7W2UUiGCvHvDbDg6ej4WrYn6NUTWOAgnnFwYkxUTVV1RRGVul6MMW0iNseNl6ra_DiMq9wnTjs-7_gCDTBFxuDLrmnpOEhvYnJgC3qMHwdO5pLDnLT9SQ82xUwN5MFjolvAV0QG-8TvWCz5kDTet-PXHxoYUDpV3gbnP0xORIs)
 
 <form id="formEnhancementSlots">
   <label ><b>Enhancement Slots:</b></label>
@@ -202,9 +199,3 @@ const divResults = document.getElementById("results");
     
 
 </script>
-</body>
-</html>
-
-
-
-
