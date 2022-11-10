@@ -79,7 +79,17 @@ Some text here about things related to Destiny 2
 Some text here about things related to Space Engineers
 
 ## <span id="SE-todo">ToDo</span>
--   Some Task
+<div id="todo">
+
+-   Moon Station
+    -   Power room with Hydro generators and batteries (NO REACTORS)
+    -   Medical room with cryo pod
+    -   Control room with LCD panels, programming blocks, and timers; ***might be big***.
+    -   Air Traffic Control tower with control seats and LCD panels
+        -   Timers:
+            -   Doors: 
+
+</div>
 
 ## <span id="SE-notes">Notes</span>
 
@@ -99,6 +109,16 @@ Some text here about things related to Space Engineers
         -   GPS:LA-SpaceStation01-02:-84533.63:-29842.35:73129.65:
     -   LA-CommsRelay-01
         -   GPS:LA-CommsRelay-01:-85342.88:-31536.17:70167.53:
+    -   LA-MoonStation02
+        -   GPS:LA-MoonStation02:21112.53:128192.23:-113157.68:
+    -   LA-MoonOrbitStationUpper
+        -   GPS:LA-MoonOrbitStationUpper:23083.69:125819.44:-113068.47:
+    -   LA-MoonOrbitStationLower
+        -   GPS:LA-MoonOrbitStationLower:23081.96:125852.98:-113061.1:
+    -   RelaySat02-01
+        -   GPS:RelaySat02-01:-95807.22:17396.89:34636.56:
+    -   RelaySat02-02
+        -   GPS:RelaySat02-02:-95808.27:17395.23:34634.29:
 
 ### <span id="SE-colors">Colors</span>
 
@@ -159,7 +179,12 @@ Some text here about things related to Space Engineers
 ---
 
 
-<!-- Reference-Style Links -->
+<!-- localstyle -->
+<style type="text/css">
+    #todo {  }
+</style>
+<!-- endlocalstyle -->
+<!-- referencelinks -->
 [1]: #techtonica "Techtonica game notes"
 [1-1]: #techtonica_todo "Techtonica - ToDo"
 [2]: #destiny_2 "Destiny 2 game notes"
@@ -171,3 +196,4 @@ Some text here about things related to Space Engineers
 [3-5]: #SE-other
 [4]: #1-city-of-heroes
 [999]: #games-on-c "Games on C drive"
+<!-- endreferencelinks -->
