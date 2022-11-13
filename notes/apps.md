@@ -17,6 +17,7 @@ Table of Contents
 
 1.  [On-screen Reticle][1]
 1.  [Stopwatch/Timer][2]
+1.  [Todo List][3]
 
 ---
 
@@ -49,7 +50,27 @@ Some text here about things related to Stopwatch/Timer application
     -   GMT offset
 -   Images
 
+.
+
+<br />
+<!-- ------ section border ------ -->
+<span id="todo-list"></span>
+
+# Todo List
+Add custom lines with check boxes to mark as complete
+
+### Features
+-   something
+-   another thing
+
+.
+
+<br />
+<!-- ------ section border ------ -->
+
+<span id=""></span>
+
 <!-- Reference Style Links -->
 [1]: #on-screen-reticle
 [2]: #stopwatch-timer
-
+[3]: #todo-list
