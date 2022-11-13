@@ -12,11 +12,8 @@ permalink: /sitemap/
 ---
 <br />
 
-# Sitemap
-
-
 -   [Home][nav-home]
--   [Notes *(not exists)*][nav-notes-index]
+-   [Notes][nav-notes-index]
     -   [Apps][nav-notes-apps]
     -   [Games][nav-notes-games]
     -   [How-To][nav-notes-howto]
@@ -29,12 +26,11 @@ permalink: /sitemap/
 
 <!-- reference-links -->
 [nav-home]: /index.md
-[nav-notes-index]: # "not exists"
+[nav-notes-index]: /notes/
 [nav-notes-apps]: /notes/apps.md
 [nav-notes-games]: /notes/games.md
 [nav-notes-howto]: /notes/how-to.md
 [nav-sandbox-index]: /sandbox/index.html
 [nav-sandbox-sandbox.md]: /sandbox/sandbox.md
 [nav-posts-newnew]: /_posts/2022-10-28-new-new.markdown
-[2]: item2.md "title"
 <!-- endreference-links -->
