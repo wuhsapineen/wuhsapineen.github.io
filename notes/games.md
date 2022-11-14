@@ -28,7 +28,8 @@ Table of Contents
         -   [Coordinates][3-4]
         -   [Colors][3-5]
         -   [Other][3-6]
-1.  [Games On C:\\][999]
+1.  [Games On C:\\][998]
+1.  [About][999]
 
 ---
 
@@ -95,6 +96,7 @@ Some text here about things related to Destiny 2
 Small mining outposts with mining drones and cargo haulers. <br />
 Cargo haulers pick up at outposts and deliver to mining hub. <br />
 Large cargo ships pick up at mining hubs and deliver to production facility. <br />
+<span id="yellow-orange">Yellow Orange</span>
 
 ```
 (\__/)
@@ -256,14 +258,57 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 - Command & Conquer: Tiberian Sun
 
 .
+<br />
+<!-- ------ section border ------ -->
+<span id="about" hidden="true">999</span>
+
+# About
+
+## Mythic Prime Color Scheme
+<div id="color-scheme"><ul>
+<li id="background"><b>Dark Blue Custom:</b> RGB(3, 9, 15), HEX(#03090F);</li>
+<li id="text"><b>Light Blue Custom:</b> RGB(180, 215, 255), HEX(#B4D7FF);</li>
+<li id="highlight"><b>White Smoke:</b> RGB(245, 245, 245), HEX(#F5F5F5);</li>
+<li id="accent"><b>Gold:</b> RGB(255, 215, 0), HEX(#FFD700);</li>
+<li id="accent2"><b>Yellow-Orange:</b> RGB(255, 174, 66), HEX(#FFAE42);</li>
+</ul></div>
 
 ---
 
 
 <!-- localstyle -->
 <style type="text/css">
-    #todo {  }
-    code { font-family: monospace; }
+    :root {
+        --white-smoke: #F5F5F5;
+        --gold: #FFD700;
+        --yellow-orange: #FFAE42;
+        --light-blue-custom: #B4D7FF;
+        --dark-blue-custom: #03090F;
+
+        --background: var(--dark-blue-custom);
+        --text: var(--light-blue-custom);
+        --highlight: var(--white-smoke);
+        --accent: var(--gold);
+        --accent2: var(--yellow-orange);
+    }
+    body {
+        color: var(--text);
+        background: var(--background);
+    }
+
+    code { font-family: Monospace; }
+
+    a:link{}
+    a:visited{}
+    a:hover{}
+    a:active{}
+
+    div#color-scheme { background: #000000; }
+    #background { color: var(--background); background: #FFFFFF;}
+    #text { color: var(--text); }
+    #highlight { color: var(--highlight); }
+    #accent { color: var(--accent); }
+    #accent2 { color: var(--accent2); }
 </style>
 <!-- endlocalstyle -->
 <!-- referencelinks -->
@@ -278,5 +323,6 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 [3-5]: #SE-colors
 [3-6]: #SE-other
 [4]: #1-city-of-heroes
-[999]: #games-on-c "Games on C drive"
+[998]: #games-on-c "Games on C drive"
+[999]: #about "Information about Notes pages"
 <!-- endreferencelinks -->
