@@ -41,6 +41,14 @@ Table of Contents
 -   Avatar of Antares
     -   Enhancements:
         <div id="enhancements_avatarofantares"></div>
+-   Ebony Beta
+    -   Incarnate Abilities:
+        -   Alpha: Tier4 Vigor
+        -   Destiny: Tier4 Ageless
+        -   **Interface: Tier3 Diagmagnetic**
+        -   Lore: Tier4 Talons of Vengeance
+        -   **Judgement: Tier3 Void**
+        -   **Hybrid: Tier3 Support**
 -   Links
     -   [Homecoming Wiki][]
     -   [Badger][]
@@ -88,6 +96,11 @@ Small mining outposts with mining drones and cargo haulers. <br />
 Cargo haulers pick up at outposts and deliver to mining hub. <br />
 Large cargo ships pick up at mining hubs and deliver to production facility. <br />
 
+```
+(\__/)
+( ='.'= )
+ (")__(")
+```
 
 
 ## <span id="SE-todo">ToDo</span>
@@ -95,7 +108,7 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 
 -   Mines:
     -   Platinum
-    -   Uranium
+    -   Uranium \[1]
     -   Gold
     -   Silver
     -   Cobalt
@@ -152,6 +165,8 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
         -   GPS:LA-MoonOrbitStationUpper:23084.2:125817.26:-113062.77:
     -   LA-MoonOrbitStationLower
         -   GPS:LA-MoonOrbitStationLower:23081.96:125852.98:-113061.1:
+    -   LA-UraniumMine01
+        -   GPS:LA-UraniumMine01:-102230.98:-35451.72:69017.63:
 -   **Relay Satellites**
     -   LA-01 (RelaySat01-01)
         -   GPS:LA-01:-79292.76:-25700.44:67608.45:
@@ -178,6 +193,13 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 
 **RDSR - Rogue Sappers**
 -   GPS:RDSR01:-70809.0942599733:-34070.1288381408:70024.7861692715:
+
+**SPRT - Space pirates**
+-   GPS:SPRT01:-94638.0889999084:-3417.0373393379:64923.3559256815:
+
+**SPDC - Specialized Drilling Consortium**
+-   GPS:SPDC01:-93342.4857315367:-34229.8181152937:63928.587241044
+
 
 ### <span id="SE-colors">Colors</span>
 
@@ -241,6 +263,7 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 <!-- localstyle -->
 <style type="text/css">
     #todo {  }
+    code { font-family: monospace; }
 </style>
 <!-- endlocalstyle -->
 <!-- referencelinks -->
