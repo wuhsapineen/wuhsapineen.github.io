@@ -121,10 +121,12 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     -   Assemblers (industrial, at least 4; 2power, 2speed)
     -   Storage (20+ large cargo containers)
 -   Salvage space station (not exists)
-    -   Large docking area for collected salvage
-    -   Grinder ships
-    -   Collection cargo containers
-    -   Dock for componant hauler
+    -   ~~Located adjacent to SpaceStation01~~ with small cargo shuttle between
+    -   ~~Large docking area for collected salvage~~
+    -   ~~Grinder ship~~s
+    -   ~~Collection cargo containers~~
+    -   ~~Dock for componant hauler~~
+    -   Cargo "buddy" to drain salvage of Hydrogen, Oxygen, and any scrap componants including ammo
 -   Moon Mining Hub (MoonStation01 - not exists)
     -   Large collection space
     -   Storage area
@@ -271,6 +273,7 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 <li id="highlight"><b>White Smoke:</b> RGB(245, 245, 245), HEX(#F5F5F5);</li>
 <li id="accent"><b>Gold:</b> RGB(255, 215, 0), HEX(#FFD700);</li>
 <li id="accent2"><b>Yellow-Orange:</b> RGB(255, 174, 66), HEX(#FFAE42);</li>
+<li id="shadow"><b>Dark Gray:</b> RGB(38, 38, 38), HEX(#262626);</li>
 </ul></div>
 
 ---
@@ -284,12 +287,14 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
         --yellow-orange: #FFAE42;
         --light-blue-custom: #B4D7FF;
         --dark-blue-custom: #03090F;
+        --dark-gray: #262626;
 
         --background: var(--dark-blue-custom);
         --text: var(--light-blue-custom);
         --highlight: var(--white-smoke);
         --accent: var(--gold);
         --accent2: var(--yellow-orange);
+        --shadow: var(--dark-gray);
     }
     body {
         color: var(--text);
@@ -309,6 +314,7 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     #highlight { color: var(--highlight); }
     #accent { color: var(--accent); }
     #accent2 { color: var(--accent2); }
+    #shadow { color: var(--shadow); background: #FFFFFF;}
 </style>
 <!-- endlocalstyle -->
 <!-- referencelinks -->
