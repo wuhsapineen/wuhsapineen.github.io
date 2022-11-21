@@ -39,24 +39,13 @@ Table of Contents
 <span id="astro-empires" hidden="true">5</span>
 
 # Astro Empires
-## Bases
--   Prime
-    -   8 MR, 3 RF, 8 SY, 5 SP
--   Beta
-    -   9 MR, 4 RF, 4 SY, 5 SP
--   Gamma
-    -   9 MR, 4 RF, 4 SY, 5 SP
--   Delta
-    -   10 MR, 5 RF, 5 SY, 5 SP
--   Epsilon
-    -   11 MR, 6 RF, 5 SY, 1 NF, 2 EC, 10 SP
 
-
-## Base Build Guide
+## Bases 
+Build Guide
 
 1. **Prime** - 8 MR, 3 RF, 8 SY (On starter base only), 5 SP
 2. **Beta** - 9 MR, 4 RF, 4 SY, 5 SP
-3. **Gamma - 9 MR, 4 RF, 4 SY, 5 SP**
+3. **Gamma** - 9 MR, 4 RF, 4 SY, 5 SP
 4. **Delta - 10 MR, 5 RF, 5 SY, 5 SP**
 5. **Epsilon - 11 MR, 6 RF, 6 SY, 1NF, 2 EC, 10 SP**
 6. **Zeta - 12 MR, 7 RF, 7 SY, 2 NF, 3 EC, 10 SP**
@@ -64,7 +53,7 @@ Table of Contents
 8. **Theta** - 14 MR, 9 RF, 9+ SY (depends on fleet spec), 4 NF, 5 EC, 15 SP
 9. **Iota** - 15 MR, 10 RF, 10+ SY (depends on fleet spec), 5 NF, 6 EC, 15 SP
 10. **Kappa** - 16 MR, 11 RF, 11+ SY (depends on fleet spec), 6 NF, 7EC, 15 SP, 1 AF GO LONG DISTANCE TRADES
-11. **LAmbda** - 17 MR, 12 RF, 12+ SY (depends on fleet spec), 7 NF, 8EC, 15 SP, 2 AF
+11. **Lambda** - 17 MR, 12 RF, 12+ SY (depends on fleet spec), 7 NF, 8EC, 15 SP, 2 AF
 12. **Mu** - 18 MR, 13 RF, 13 SY, 9 NF, 4 AF, 10 EC, 20 SP - if credit crunched do a couple at a time 15->20 so you get the extra TR
 13. **Nu** - 20 MR, 15 RF, 15 SY, 10 NF, 11 EC, 6 AF, 20 SP
 14. **Xi** - 21 MR, 16 RF, 16 SY, 1 OSY, 11 NF, 12 EC, 7 AF, 20 SP
@@ -74,15 +63,17 @@ Table of Contents
 18. **Sigma** - 30 MR, 25 RF, 25 SY, 10 OSY, 20 NF, 20 EC, 15 AF, 30 SP
 
 ```
-Bases 1 - 9
+Bases 1+
 - MR -	- Metal Refinery
 - RF -	- Robotics Factory
 - SY -	- Shipyard
 - SP -	- Spaceport
+
+Bases 5+
 - NF - 	- Nanite Factory
 - EC -	- Economic Center
 
-Bases 10 - 13
+Bases 10+
 - AF -	- Android Factory
 
 Bases 14+
@@ -181,7 +172,9 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
         -   O2/H2 Generators to refill hydro tanks
         -   Hydrogen Engines to charge batteries
         -   Enough batteries for full systems usage plus drone charging
--   Salvage space station (not exists)
+        -   Cold start reactor
+        -   
+-   Salvage space station (SalvageStation01)
     -   ~~Located adjacent to SpaceStation01~~ with small cargo shuttle between
     -   ~~Large docking area for collected salvage~~
     -   ~~Grinder ship~~s
