@@ -17,9 +17,8 @@ reference:
 
 Table of Contents
 
+1.  [Astro Empires][5]
 1.  [City of Heroes][4]
-1.   [Techtonica][1]
-        -   [ToDo][1-1]
 1.  [Destiny 2][2]
 1.  [Space Engineers][3]
     -   [Todo][3-1]
@@ -28,10 +27,77 @@ Table of Contents
         -   [Coordinates][3-4]
         -   [Colors][3-5]
         -   [Other][3-6]
+1.   [Techtonica][1]
+        -   [ToDo][1-1]
 1.  [Games On C:\\][998]
 1.  [About][999]
 
 ---
+
+<br />
+<!-- ------ section border ------ -->
+<span id="astro-empires" hidden="true">5</span>
+
+# Astro Empires
+## Bases
+-   Prime
+    -   8 MR, 3 RF, 8 SY, 5 SP
+-   Beta
+    -   9 MR, 4 RF, 4 SY, 5 SP
+-   Gamma
+    -   9 MR, 4 RF, 4 SY, 5 SP
+-   Delta
+    -   10 MR, 5 RF, 5 SY, 5 SP
+-   Epsilon
+    -   11 MR, 6 RF, 5 SY, 1 NF, 2 EC, 10 SP
+
+
+## Base Build Guide
+
+1. **Prime** - 8 MR, 3 RF, 8 SY (On starter base only), 5 SP
+2. **Beta** - 9 MR, 4 RF, 4 SY, 5 SP
+3. **Gamma - 9 MR, 4 RF, 4 SY, 5 SP**
+4. **Delta - 10 MR, 5 RF, 5 SY, 5 SP**
+5. **Epsilon - 11 MR, 6 RF, 6 SY, 1NF, 2 EC, 10 SP**
+6. **Zeta - 12 MR, 7 RF, 7 SY, 2 NF, 3 EC, 10 SP**
+7. **Eta** - 13 MR, 8 RF, 8 SY, 2 NF, 3 EC, 10 SP - Some go 15 SP before simming for base 8.
+8. **Theta** - 14 MR, 9 RF, 9+ SY (depends on fleet spec), 4 NF, 5 EC, 15 SP
+9. **Iota** - 15 MR, 10 RF, 10+ SY (depends on fleet spec), 5 NF, 6 EC, 15 SP
+10. **Kappa** - 16 MR, 11 RF, 11+ SY (depends on fleet spec), 6 NF, 7EC, 15 SP, 1 AF GO LONG DISTANCE TRADES
+11. **LAmbda** - 17 MR, 12 RF, 12+ SY (depends on fleet spec), 7 NF, 8EC, 15 SP, 2 AF
+12. **Mu** - 18 MR, 13 RF, 13 SY, 9 NF, 4 AF, 10 EC, 20 SP - if credit crunched do a couple at a time 15->20 so you get the extra TR
+13. **Nu** - 20 MR, 15 RF, 15 SY, 10 NF, 11 EC, 6 AF, 20 SP
+14. **Xi** - 21 MR, 16 RF, 16 SY, 1 OSY, 11 NF, 12 EC, 7 AF, 20 SP
+15. **Omicron** - 23 MR, 18 RF, 18 SY, 3 OSY, 13 NF, 14 EC, 8 AF, 25 SP
+16. **Pi** - 25 MR, 20 RF, 20 SY, 5 OSY, 15 NF, 16 EC, 10 AF, 25 SP
+17. **Rho** - 27 MR, 22 RF, 22 SY, 6 OSY, 17 NF, 18 EC, 11 AF, 25 SP
+18. **Sigma** - 30 MR, 25 RF, 25 SY, 10 OSY, 20 NF, 20 EC, 15 AF, 30 SP
+
+```
+Bases 1 - 9
+- MR -	- Metal Refinery
+- RF -	- Robotics Factory
+- SY -	- Shipyard
+- SP -	- Spaceport
+- NF - 	- Nanite Factory
+- EC -	- Economic Center
+
+Bases 10 - 13
+- AF -	- Android Factory
+
+Bases 14+
+- OSY - 	- Orbital Shipyard
+```
+
+-   Key:
+    -   MR: Metal Refinery
+    -   RF: Robotics Factor
+    -   SY: Shipyard
+    -   SP: Spaceport
+    -   NF: Nanite Factor
+    -   EC: Economic Center
+    -   AF: Android Factor
+    -   OSY: Orbital Shipyard
 
 <br />
 <!-- ------ section border ------ -->
@@ -50,29 +116,12 @@ Table of Contents
         -   Lore: Tier4 Talons of Vengeance
         -   **Judgement: Tier3 Void**
         -   **Hybrid: Tier3 Support**
--   Links
-    -   [Homecoming Wiki][]
-    -   [Badger][]
-
-<br />
-<!-- ------ section border ------ -->
-<span id="techtonica" hidden="true">2</span>
-
-# Techtonica 
-Some text here about things related to Techtonica
-
-<br />
-<span id="techtonica_todo"></span>
-
-## ToDo 
--   Build assemblers
-    -   Floors
-    -   Inserters
-    -   Conveyors
-
-To Be Continued...
-
-. 
+-   Zipper Surly
+    -   Badges:
+        -   one
+## Links
+-   [Homecoming Wiki][4-1]
+-   [Badger][4-2]
 
 <br />
 <!-- ------ section border ------ -->
@@ -114,12 +163,24 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     -   Gold
     -   Silver
     -   Cobalt
--   Production Facility (not exists)
-    -   O2/H2 Generators (at least 10)
-    -   Hydrogen Engines for power
-    -   Refineries (at least 10; 2power, 2yield)
-    -   Assemblers (industrial, at least 4; 2power, 2speed)
-    -   Storage (20+ large cargo containers)
+-   Production Facility (ProductionStation)
+    -   GPS:
+        -   GPS:17. ProductionStation Approach 1:-76289.51:19135.81:78707.51:#FFB4D7FF:
+        -   GPS:18. ProductionStation Approach 2:-76346.01:19532.63:79626.54:#FFB4D7FF:
+    -   O2/H2 Generators (x80)
+    -   Hydrogen Engines (x40)
+    -   Solar Panels (x324)
+    -   Refineries (x24; 2x Power Module, 2x Yield Module each)
+    -   Assemblers (x24; 2x Power Module, 2x Speed Module each)
+    -   Storage (x144; Large Industrial Cargo Container)
+-   Mining Carrier (not exists)
+    -   Has:
+        -   Hydrogen thrusters
+        -   Plenty of hydrogen storage (>=20 large containers)
+        -   Plenty of ore storage space (>=20 large containers)
+        -   O2/H2 Generators to refill hydro tanks
+        -   Hydrogen Engines to charge batteries
+        -   Enough batteries for full systems usage plus drone charging
 -   Salvage space station (not exists)
     -   ~~Located adjacent to SpaceStation01~~ with small cargo shuttle between
     -   ~~Large docking area for collected salvage~~
@@ -195,21 +256,29 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 
 ### <span id="SE-coords">Coordinates</span>
 
-**RDSR - Rogue Sappers**
--   GPS:RDSR01:-70809.0942599733:-34070.1288381408:70024.7861692715:
-
-**SPRT - Space pirates**
--   GPS:SPRT01:-94638.0889999084:-3417.0373393379:64923.3559256815:
-
-**SPDC - Specialized Drilling Consortium**
--   GPS:SPDC01:-93342.4857315367:-34229.8181152937:63928.587241044
+-   **RDSR - Rogue Sappers**
+    -   GPS:RDSR01:-70809.0942599733:-34070.1288381408:70024.7861692715:
+-   **SPRT - Space pirates**
+    -   GPS:SPRT01:-94638.0889999084:-34170.0373393379:64923.3559256815:
+-   **SPDC - Specialized Drilling Consortium**
+    -   GPS:SPDC01:-93342.4857315367:-34229.8181152937:63928.587241044
+-   **UDHS - Unyielding Hauling Service**
+    -   GPS:UDHS01:-84776.7402741437:-31475.8978549342:71974.4470085772
 
 
 ### <span id="SE-colors">Colors</span>
 
 -   **Blocks:**
-    -   Light Blue: #3368B8
-    -   Dark Blue: #112F5C
+
+<div id="color-scheme"><ul>
+<li id="background"><b>Dark Blue Custom:</b> RGB(3, 9, 15), HEX(#03090F);</li>
+<li id="text"><b>Light Blue Custom:</b> RGB(180, 215, 255), HEX(#B4D7FF);</li>
+<li id="highlight"><b>White Smoke:</b> RGB(245, 245, 245), HEX(#F5F5F5);</li>
+<li id="accent"><b>Gold:</b> RGB(255, 215, 0), HEX(#FFD700);</li>
+<li id="accent2"><b>Yellow-Orange:</b> RGB(255, 174, 66), HEX(#FFAE42);</li>
+<li id="shadow"><b>Dark Gray:</b> RGB(38, 38, 38), HEX(#262626);</li>
+</ul></div>
+
 -   **Other:**
     -   Light Blue (Lights): RGB(180,215,255)
     -   Dark Blue (Display BG): RGB(3,9,15)
@@ -221,11 +290,31 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 
 <br />
 <!-- ------ section border ------ -->
+<span id="techtonica" hidden="true">2</span>
+
+# Techtonica 
+Some text here about things related to Techtonica
+
+<br />
+<span id="techtonica_todo"></span>
+
+## ToDo 
+-   Build assemblers
+    -   Floors
+    -   Inserters
+    -   Conveyors
+
+To Be Continued...
+
+. 
+
+<br />
+<!-- ------ section border ------ -->
 <span id="games-other" hidden="true">998</span>
 
 # Other
 
-## Sub-section
+## Design Notes and Inspiration
 -   Trade profit formula
     -   **Sqrt(0) x [ 1 + Sqrt(0)/75 + Sqrt(0)/10 ] = 0 cred./h**
     -   *(Sqrt(min. Income) x [ 1 + Sqrt(Distance)/75 + Sqrt(Players)/10 ])*
@@ -318,17 +407,20 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 </style>
 <!-- endlocalstyle -->
 <!-- referencelinks -->
-[1]: #techtonica "Techtonica game notes"
-[1-1]: #techtonica_todo "Techtonica - ToDo"
-[2]: #destiny_2 "Destiny 2 game notes"
-[3]: #space_engineers "Space Engineers game notes"
+[1]: #techtonica
+[1-1]: #techtonica_todo
+[2]: #destiny_2
+[3]: #space_engineers
 [3-1]: #SE-todo
 [3-2]: #SE-notes
 [3-3]: #SE-laserantennae
 [3-4]: #SE-coords
 [3-5]: #SE-colors
 [3-6]: #SE-other
-[4]: #1-city-of-heroes
+[4]: #city-of-heroes
+[4-1]: https://homecoming.wiki/wiki/Main_Page
+[4-2]: https://n15g.github.io/badger/
+[5]: #astro-empires
 [998]: #games-on-c "Games on C drive"
 [999]: #about "Information about Notes pages"
 <!-- endreferencelinks -->
