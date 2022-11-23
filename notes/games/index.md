@@ -92,18 +92,20 @@ Table of Contents
 
 
 <!-- referencelinks -->
-[1]: #techtonica
-[1-1]: #techtonica_todo
-[2]: #destiny_2
-[3]: #space_engineers
+[1]: #techtonica.md
+[1-1]: #techtonica.md#todo
+[2]: #destiny-2.md
+[3]: #space-engineers.md
+<!--
 [3-1]: #SE-todo
 [3-2]: #SE-notes
 [3-3]: #SE-laserantennae
 [3-4]: #SE-coords
 [3-5]: #SE-colors
 [3-6]: #SE-other
-[4]: #city-of-heroes
-[5]: #astro-empires
+-->
+[4]: #city-of-heroes.md
+[5]: #astro-empires.md
 [998]: #games-on-c "Games on C drive"
 [999]: #about "Information about Notes pages"
 <!-- endreferencelinks -->
