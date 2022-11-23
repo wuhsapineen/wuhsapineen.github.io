@@ -1,4 +1,15 @@
-# Space Engineers 
+---
+title: Space Engineers
+description: 
+created: 2022-11-08 07:30:00 +1000
+tags: pages, notes, games, Space Engineers
+source: 
+author: wuhsapineen
+nav: false
+reference:
+- []
+
+---
 Small mining outposts with mining drones and cargo haulers. <br />
 Cargo haulers pick up at outposts and deliver to mining hub. <br />
 Large cargo ships pick up at mining hubs and deliver to production facility. <br />
