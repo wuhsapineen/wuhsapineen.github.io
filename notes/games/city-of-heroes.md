@@ -1,4 +1,15 @@
-# City of Heroes
+---
+title: City of Heroes
+description: 
+created: 2022-11-08 07:30:00 +1000
+tags: pages, notes, games, City of Heroes
+source: 
+author: wuhsapineen
+nav: false
+reference:
+- []
+
+---
 ## Characters
 -   Avatar of Antares
     -   Enhancements:
