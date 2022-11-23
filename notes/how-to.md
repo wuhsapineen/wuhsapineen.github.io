@@ -16,7 +16,7 @@ layout: default
 <!-- referencelinks -->
 [1]: {% link notes/index.md %} "Notes Index"
 [nav-apps]: {% link notes/apps.md %} "Applications notes"
-[nav-games]: {% link notes/games.md %} "Games notes"
+[nav-games]: {% link notes/games/index.md %} "Games notes"
 <!-- endreferencelinks -->
 
 <!--
