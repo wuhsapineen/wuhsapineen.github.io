@@ -77,18 +77,8 @@ Bases 10+
 - AF -	- Android Factory
 
 Bases 14+
-- OSY - 	- Orbital Shipyard
+- OSY - - Orbital Shipyard
 ```
-
--   Key:
-    -   MR: Metal Refinery
-    -   RF: Robotics Factor
-    -   SY: Shipyard
-    -   SP: Spaceport
-    -   NF: Nanite Factor
-    -   EC: Economic Center
-    -   AF: Android Factor
-    -   OSY: Orbital Shipyard
 
 <br />
 <!-- ------ section border ------ -->
