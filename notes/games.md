@@ -47,7 +47,7 @@ Build Guide
 2. **Beta** - 9 MR, 4 RF, 4 SY, 5 SP
 3. **Gamma** - 9 MR, 4 RF, 4 SY, 5 SP
 4. **Delta** - 10 MR, 5 RF, 5 SY, 5 SP
-5. **Epsilon - 11 MR, 6 RF, 6 SY, 1NF, 2 EC, 10 SP**
+5. **Epsilon** - 11 MR, 6 RF, 6 SY, 1NF, 2 EC, 10 SP
 6. **Zeta - 12 MR, 7 RF, 7 SY, 2 NF, 3 EC, 10 SP**
 7. **Eta - 13 MR, 8 RF, 8 SY, 2 NF, 3 EC, 10 SP - Some go 15 SP before simming for base 8.**
 8. **Theta** - 14 MR, 9 RF, 9+ SY (depends on fleet spec), 4 NF, 5 EC, 15 SP
