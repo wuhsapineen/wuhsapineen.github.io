@@ -5,9 +5,10 @@ created: 2022-10-28 06:02:00 +1000
 tags: pages, notes, games
 source: 
 author: wuhsapineen
+nav: false
 reference:
 - []
-
+permalink: /games/
 ---
 <br />
 
