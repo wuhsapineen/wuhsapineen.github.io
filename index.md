@@ -1,6 +1,7 @@
 ---
+title: Home
 layout: home
-
+nav: true
 ---
 -   [sandbox][2]
 -   [.][1]
