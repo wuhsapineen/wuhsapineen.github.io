@@ -22,6 +22,6 @@ reference:
 
 <!-- reference-links -->
 [1]: apps.md
-[2]: games.md
+[2]: games/index.md
 [3]: how-to.md
 <!-- endreference-links -->
