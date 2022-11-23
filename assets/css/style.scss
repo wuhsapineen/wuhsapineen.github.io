@@ -11,7 +11,40 @@
     --main-silver-dark: #798797;
     --main-blue-light: #689eca;
     --main-blue-dark: #284f71;
+
+    --white-smoke: #F5F5F5;
+    --gold: #FFD700;
+    --yellow-orange: #FFAE42;
+    --light-blue-custom: #B4D7FF;
+    --dark-blue-custom: #03090F;
+    --dark-gray: #262626;
+
+    --background: var(--dark-blue-custom);
+    --text: var(--light-blue-custom);
+    --highlight: var(--white-smoke);
+    --accent: var(--gold);
+    --accent2: var(--yellow-orange);
+    --shadow: var(--dark-gray);
 }
+body {
+    color: var(--text);
+    background: var(--background);
+}
+
+code { font-family: Monospace; }
+
+a:link{ color: var(--yellow-orange); }
+a:visited{ color: var(--yellow-orange); }
+a:hover{ color: var(--gold); }
+a:active{ color: var(--white-smoke); }
+
+div#color-scheme { background: #000000; }
+#background { color: var(--background); background: #FFFFFF;}
+#text { color: var(--text); }
+#highlight { color: var(--highlight); }
+#accent { color: var(--accent); }
+#accent2 { color: var(--accent2); }
+#shadow { color: var(--shadow); background: #FFFFFF;}
 
 #m80-button {
     border-radius: 18px;
