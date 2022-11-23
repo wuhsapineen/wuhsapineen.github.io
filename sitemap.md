@@ -28,7 +28,7 @@ permalink: /sitemap/
 [nav-home]: /index.md
 [nav-notes-index]: /notes/
 [nav-notes-apps]: /notes/apps.md
-[nav-notes-games]: /notes/games.md
+[nav-notes-games]: /notes/games/index.md
 [nav-notes-howto]: /notes/how-to.md
 [nav-sandbox-index]: /sandbox/index.html
 [nav-sandbox-sandbox.md]: /sandbox/sandbox.md
