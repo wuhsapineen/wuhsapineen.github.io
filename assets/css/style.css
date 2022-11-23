@@ -1,9 +1,3 @@
----
----
-
-@import "{{ site.theme }}";
-
-// Color scheme
 :root {
     --main-white-light: #ffffff;
     --main-white-dark: #cccccc;
