@@ -1,5 +1,15 @@
-# Astro Empires
+---
+title: Astro Empires
+description: 
+created: 2022-11-24 07:30:00 +1000
+tags: pages, notes, games, Astro Empires
+source: 
+author: wuhsapineen
+nav: false
+reference:
+- []
 
+---
 ## Bases 
 Build Guide
 
