@@ -18,6 +18,17 @@
 -   [Homecoming Wiki][4-1]
 -   [Badger][4-2]
 
+## Auction House
+
+-   Invention Salvage
+    -   White: 250 - 500
+    -   Yellow: 1000 - 2000
+    -   Orange: <= 400000
+-   Rare/Very Rare Enhancements
+    -   D-Sync (Dr. Aeon SF)
+        -   Preservation (90,000,000 inf)
+    -   Hamidon Origin
+
 <br />
 
 <!-- referencelinks -->
