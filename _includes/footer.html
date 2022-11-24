@@ -1,11 +1,7 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
   <div class="wrapper">
-
-    <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
-
     <div class="footer-col-wrapper">
+      
       <div class="footer-col footer-col-1">
         <ul class="footer-nav">
             {%- if site.sitemap -%}
@@ -19,13 +15,11 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{%- if site.copyright -%}
+        {%- if site.copyright -%}
         Except where otherwise noted, content on this site is licensed under the <a href="{{ site.copyright | first }}" target="_blank">{{ site.copyright | last }}</a>
         {%- endif -%}
-        </p>
       </div>
+
     </div>
-
   </div>
-
 </footer>
