@@ -14,6 +14,11 @@ theme: minima
 plugins:
   - jekyll-feed
 
+navigation: [
+  [Home,index.md],
+  [Notes,/notes/index.md],
+  [Sandbox,/sandbox/index.md]
+]
 
 exclude:
   - .hidden/
