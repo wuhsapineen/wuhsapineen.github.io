@@ -41,7 +41,7 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     -   Refineries (x24; 2x Power Module, 2x Yield Module each)
     -   Assemblers (x24; 2x Power Module, 2x Speed Module each)
     -   Storage (x144; Large Industrial Cargo Container)
--   Mining Carrier (not exists)
+-   Mining Carrier (exists - naming required)
     -   Has:
         -   Hydrogen thrusters
         -   Plenty of hydrogen storage (>=20 large containers)
@@ -51,6 +51,8 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
         -   Enough batteries for full systems usage plus drone charging
         -   Cold start reactor
         -   
+-   Mining Drones (partially exists - naming required)
+    -   Rebrand existing PAM drone with M80 colors
 -   Salvage space station (SalvageStation01)
     -   ~~Located adjacent to SpaceStation01~~ with small cargo shuttle between
     -   ~~Large docking area for collected salvage~~
@@ -136,6 +138,21 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     -   GPS:UDHS01:-84776.7402741437:-31475.8978549342:71974.4470085772
 
 
+### <span id="SE-naming-convention">Naming Convention</span>
+
+-   ATS: Salvage and Rescue Ship
+-   ARS: Rescue and Salvage Ship
+-   AKD: Cargo Ship, Dock
+-   AP: Transport
+-   AR: Repair Ship
+-   AT: Fleet Tug
+-   ATR: Rescue Tug
+-   CVU: Carrier Utility
+-   LCU: Landing Craft Utility
+-   YT: Yard Tug
+-    
+-   MD: Mining Drone
+
 ### <span id="SE-colors">Colors</span>
 
 -   **Blocks:**
@@ -154,6 +171,19 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     -   Dark Blue (Display BG): RGB(3,9,15)
 
 ### <span id="SE-other">Other</span>
+
+
+## <span id="SE-ship-registry">Ship Registry</span>
+
+- Ship name/number
+- Location (ship name if assigned to a carrier)
+- Ship type (blueprint name)
+
+| Ship Name | Assigned Location | Ship Type |
+| --- | --- | --- |
+| CVU-001 | N/A | M80 Mining Carrier |
+| MD-001 | CVU-001 | M80 Mining Drone |
+| MD-002 | CVU-001 | M80 Mining Drone |
 
 
 .
