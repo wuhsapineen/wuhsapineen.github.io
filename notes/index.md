@@ -1,5 +1,5 @@
 ---
-title: Notes Index
+title: Notes
 description: 
 created: 2022-11-08 04:39:00 +1000
 tags: pages, notes
