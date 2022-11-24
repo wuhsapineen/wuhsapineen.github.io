@@ -8,5 +8,5 @@ nav: true
 
 
 <!-- Reference-Style Links -->
-[1]: How-To.md
+[1]: /notes/how-to.md
 [2]: /sandbox/index.html
