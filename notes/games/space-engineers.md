@@ -26,7 +26,7 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 <div id="todo">
 
 -   Mines:
-    -   Platinum
+    -   **Platinum\***
     -   Uranium \[1]
     -   Gold
     -   Silver
@@ -35,31 +35,20 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     -   GPS:
         -   GPS:17. ProductionStation Approach 1:-76289.51:19135.81:78707.51:#FFB4D7FF:
         -   GPS:18. ProductionStation Approach 2:-76346.01:19532.63:79626.54:#FFB4D7FF:
+        -   GPS:83. Jump - Production Station:-77708.52:15668.42:82215.72:#FFFFD700:
     -   O2/H2 Generators (x80)
     -   Hydrogen Engines (x40)
     -   Solar Panels (x324)
     -   Refineries (x24; 2x Power Module, 2x Yield Module each)
     -   Assemblers (x24; 2x Power Module, 2x Speed Module each)
     -   Storage (x144; Large Industrial Cargo Container)
--   Mining Carrier (exists - naming required)
-    -   Has:
-        -   Hydrogen thrusters
-        -   Plenty of hydrogen storage (>=20 large containers)
-        -   Plenty of ore storage space (>=20 large containers)
-        -   O2/H2 Generators to refill hydro tanks
-        -   Hydrogen Engines to charge batteries
-        -   Enough batteries for full systems usage plus drone charging
-        -   Cold start reactor
-        -   
--   Mining Drones (partially exists - naming required)
-    -   Rebrand existing PAM drone with M80 colors
 -   Salvage space station (SalvageStation01)
-    -   ~~Located adjacent to SpaceStation01~~ with small cargo shuttle between
+    -   ~~Located adjacent to SpaceStation01~~ ***with small cargo shuttle between***
     -   ~~Large docking area for collected salvage~~
     -   ~~Grinder ship~~s
     -   ~~Collection cargo containers~~
     -   ~~Dock for componant hauler~~
-    -   Cargo "buddy" to drain salvage of Hydrogen, Oxygen, and any scrap componants including ammo
+    -   ~~Cargo "buddy" to drain salvage of Hydrogen, Oxygen, and any scrap componants including ammo~~
 -   Moon Mining Hub (MoonStation01 - not exists)
     -   Large collection space
     -   Storage area
@@ -75,10 +64,30 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
         -   Timers:
             -   Doors: 
     -   ~~Air Traffic Control tower with control seats and LCD panels~~
+-   ~~Mining Carrier~~
+    -   **Name:** CVU-###
+    -   **Blueprint:** M80 Mining Carrier
+    -   Has:
+        -   Hydrogen thrusters
+        -   Plenty of hydrogen storage (>=20 large containers)
+        -   Plenty of ore storage space (>=20 large containers)
+        -   O2/H2 Generators to refill hydro tanks
+        -   Hydrogen Engines to charge batteries
+        -   Enough batteries for full systems usage plus drone charging
+        -   Cold start reactor
+        -   
+-   ~~Mining Drones~~ 
+    -   **Name:** MD-###
+    -   **Blueprint:** M80 Mining Drone
+    -   ~~Rebrand existing PAM drone with M80 colors~~
 
 </div>
 
 ## <span id="SE-notes">Notes</span>
+
+### <span id="SE-networkedgrids">Networked Grids</span>
+Remote control blocks must be placed on each grid with the grid name in its name. E.g. Remote Control - SpaceStation01
+-   SpaceStation01
 
 ### <span id="SE-laserantennae">Laser Antennae</span>
 -   **Stations**
@@ -90,20 +99,33 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
         -   GPS:LA-SpaceStation01-01:-84470.04:-29839.42:73006.27:
     -   LA-SpaceStation01-02
         -   GPS:LA-SpaceStation01-02:-84533.63:-29842.35:73129.65:
-    -   LA-CommsRelay-01
-        -   GPS:LA-CommsRelay-01:-85342.88:-31536.17:70167.53:
-    -   LA-CommsRelay-02
-        -   not exists
-    -   LA-CommsRelay-03
-        -   not exists
     -   LA-MoonStation02
         -   GPS:LA-MoonStation02:21112.53:128192.23:-113157.68:
     -   LA-MoonOrbitStationUpper
         -   GPS:LA-MoonOrbitStationUpper:23084.2:125817.26:-113062.77:
     -   LA-MoonOrbitStationLower
         -   GPS:LA-MoonOrbitStationLower:23081.96:125852.98:-113061.1:
+    -   LA-ProductionStation01
+        -   not exists
     -   LA-UraniumMine01
         -   GPS:LA-UraniumMine01:-102230.98:-35451.72:69017.63:
+-   **Comms Relay Antennae**
+    -   LA-CommsRelay-01
+        -   GPS:LA-CommsRelay-01:-85422.2:-31278.44:69662.29:
+    -   LA-CommsRelay-02
+        -   GPS:LA-CommsRelay-02:-85419.55:-31282.05:69660.06:
+    -   LA-CommsRelay-03
+        -   GPS:LA-CommsRelay-03:-85415.87:-31279.86:69666.5:
+    -   LA-CommsRelay-04
+        -   GPS:LA-CommsRelay-04:-85424.55:-31285.31:69664.98:
+    -   LA-CommsRelay-05
+        -   GPS:LA-CommsRelay-05:-85335.98:-31581.21:70254.12:
+    -   LA-CommsRelay-06
+        -   GPS:LA-CommsRelay-06:-85333.33:-31584.81:70251.89:
+    -   LA-CommsRelay-07
+        -   GPS:LA-CommsRelay-07:-85330.99:-31577.95:70249.2:
+    -   LA-CommsRelay-08
+        -   GPS:LA-CommsRelay-08:-85339.66:-31583.4:70247.68:
 -   **Relay Satellites**
     -   LA-01 (RelaySat01-01)
         -   GPS:LA-01:-79292.76:-25700.44:67608.45:
@@ -120,8 +142,10 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 -   **Connections**
     -   LA-Earth01 - LA-RelaySat01-01
     -   LA-SpaceStation01-01 - LA-RelaySat01-02
-    -   LA-SpaceStation01-02 - LA-CommsRelay-01
-    -   LA-RelaySat02-01 - 
+    -   LA-SpaceStation01-02 - LA-CommsRelay-08
+    -   LA-ProductionStation01 - LA-CommsRelay-01
+    -   LA-CommsRelay-02 - LA-UranuumMine01
+    -   LA-RelaySat02-01 - LA-CommsRelay-03
     -   LA-RelaySat02-02 - LA-RelaySat03-01
     -   LA-RelaySat03-02 - LA-MoonOrbitStationUpper
     -   LA-MoonOrbitStationLower - LA-MoonStation02
@@ -183,6 +207,18 @@ Pertam | -4000000 | -65000 | -800000 | -3868928 | 66072 | -668928 |  | 30066.5 |
     -   Light Blue (Lights): RGB(180,215,255)
     -   Dark Blue (Display BG): RGB(3,9,15)
 
+### <span id="SE-autolcd">Common AutoLCD Commands</span>
+
+```
+Center P O W E R
+PowerStored {G:Carrier Batteries} {Batteries Stored}
+PowerIn {G:Carrier Batteries} {Batteries In}
+PowerOut {G:Carrier Batteries} {Batteries Out}
+```
+```
+Another one
+```
+
 ### <span id="SE-other">Other</span>
 
 
@@ -197,6 +233,12 @@ Pertam | -4000000 | -65000 | -800000 | -3868928 | 66072 | -668928 |  | 30066.5 |
 | CVU-001 | N/A | M80 Mining Carrier |
 | MD-001 | CVU-001 | M80 Mining Drone |
 | MD-002 | CVU-001 | M80 Mining Drone |
+| MD-003 | CVU-001 | M80 Mining Drone |
+| MD-004 | CVU-001 | M80 Mining Drone |
+| MD-005 | CVU-001 | M80 Mining Drone |
+| MD-006 | CVU-001 | M80 Mining Drone |
+| MD-007 | CVU-001 | M80 Mining Drone |
+| MD-008 | CVU-001 | M80 Mining Drone |
 
 
 .
