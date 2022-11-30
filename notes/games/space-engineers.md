@@ -31,17 +31,8 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     -   Gold
     -   Silver
     -   Cobalt
--   Production Facility (ProductionStation)
-    -   GPS:
-        -   GPS:17. ProductionStation Approach 1:-76289.51:19135.81:78707.51:#FFB4D7FF:
-        -   GPS:18. ProductionStation Approach 2:-76346.01:19532.63:79626.54:#FFB4D7FF:
-        -   GPS:83. Jump - Production Station:-77708.52:15668.42:82215.72:#FFFFD700:
-    -   O2/H2 Generators (x80)
-    -   Hydrogen Engines (x40)
-    -   Solar Panels (x324)
-    -   Refineries (x24; 2x Power Module, 2x Yield Module each)
-    -   Assemblers (x24; 2x Power Module, 2x Speed Module each)
-    -   Storage (x144; Large Industrial Cargo Container)
+-   Grid Networking
+    -   Build Remote Control blocks on all grids and name them appropriately (Remote Control - \<Grid Name\>)
 -   Salvage space station (SalvageStation01)
     -   ~~Located adjacent to SpaceStation01~~ ***with small cargo shuttle between***
     -   ~~Large docking area for collected salvage~~
@@ -64,6 +55,19 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
         -   Timers:
             -   Doors: 
     -   ~~Air Traffic Control tower with control seats and LCD panels~~
+-   ~~Production Facility~~ (ProductionStation)
+    -   **Name:** ProductionStation
+    -   **Remote Control:** Remote Control - ProductionStation (notexists)
+    -   GPS:
+        -   GPS:17. ProductionStation Approach 1:-76289.51:19135.81:78707.51:#FFB4D7FF:
+        -   GPS:18. ProductionStation Approach 2:-76346.01:19532.63:79626.54:#FFB4D7FF:
+        -   GPS:83. Jump - Production Station:-77708.52:15668.42:82215.72:#FFFFD700:
+    -   O2/H2 Generators (x80)
+    -   Hydrogen Engines (x40)
+    -   Solar Panels (x324)
+    -   Refineries (x24; 2x Power Module, 2x Yield Module each)
+    -   Assemblers (x24; 2x Power Module, 2x Speed Module each)
+    -   Storage (x144; Large Industrial Cargo Container)
 -   ~~Mining Carrier~~
     -   **Name:** CVU-###
     -   **Blueprint:** M80 Mining Carrier
