@@ -9,6 +9,18 @@ nav: false
 reference:
 - []
 
+Table of Contents:
+
+-   [To Do][3-01]
+-   [Networked Grids][3-02]
+-   [Laser Antennae][3-03]
+-   [Coordinates][3-04]
+-   [Naming Convention][3-05]
+-   [Colors][3-06]
+-   [Auto LCD][3-07]
+-   [Other][3-08]
+-   [Ship Registry][3-10]
+
 ---
 Small mining outposts with mining drones and cargo haulers. <br />
 Cargo haulers pick up at outposts and deliver to mining hub. <br />
@@ -23,7 +35,6 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
 
 
 ## <span id="SE-todo">ToDo</span>
-<div id="todo">
 
 -   Mines:
     -   **Platinum\***
@@ -85,7 +96,6 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     -   **Blueprint:** M80 Mining Drone
     -   ~~Rebrand existing PAM drone with M80 colors~~
 
-</div>
 
 ## <span id="SE-notes">Notes</span>
 
@@ -248,3 +258,15 @@ Another one
 .
 
 <br />
+
+<!-- reference links -->
+[3-01]: #SE-todo
+[3-02]: #SE-networkedgrids
+[3-03]: #SE-laserantennae
+[3-04]: #SE-coords
+[3-05]: #SE-naming-convention
+[3-06]: #SE-colors
+[3-07]: #SE-autolcd
+[3-08]: #SE-other
+[3-09]: #SE-ship-registry
+<!-- end reference links -->
