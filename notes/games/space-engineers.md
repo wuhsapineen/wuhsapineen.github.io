@@ -244,7 +244,12 @@ Another one
 
 | Ship Name | Assigned Location | Ship Type |
 | --- | --- | --- |
-| CVU-001 | N/A | M80 Mining Carrier |
+| **Utility Ships** |
+| a | b | c |
+| **Mining Carriers** |
+| CVU-001 | Earth-like Orbit | M80 Mining Carrier |
+| CVU-002 | Earth-like Orbit | M80 Mining Carrier |
+| **Mining Drones** |
 | MD-001 | CVU-001 | M80 Mining Drone |
 | MD-002 | CVU-001 | M80 Mining Drone |
 | MD-003 | CVU-001 | M80 Mining Drone |
@@ -253,6 +258,14 @@ Another one
 | MD-006 | CVU-001 | M80 Mining Drone |
 | MD-007 | CVU-001 | M80 Mining Drone |
 | MD-008 | CVU-001 | M80 Mining Drone |
+| MD-009 | CVU-002 | M80 Mining Drone |
+| MD-010 | CVU-002 | M80 Mining Drone |
+| MD-011 | CVU-002 | M80 Mining Drone |
+| MD-012 | CVU-002 | M80 Mining Drone |
+| MD-013 | CVU-002 | M80 Mining Drone |
+| MD-014 | CVU-002 | M80 Mining Drone |
+| MD-015 | CVU-002 | M80 Mining Drone |
+| MD-016 | CVU-002 | M80 Mining Drone |
 
 
 .
