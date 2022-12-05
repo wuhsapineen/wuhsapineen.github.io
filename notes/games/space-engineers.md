@@ -21,11 +21,12 @@ Table of Contents:
 -   [Other][3-08]
 -   [Ship Registry][3-09]
 
+
 ---
+
 Small mining outposts with mining drones and cargo haulers. <br />
 Cargo haulers pick up at outposts and deliver to mining hub. <br />
-Large cargo ships pick up at mining hubs and deliver to production facility. <br />
-<span id="yellow-orange">Yellow Orange</span>
+Large cargo ships pick up at mining hubs and deliver to production facility (requires jump drive). <br />
 
 ```
 (\__/)
@@ -218,6 +219,7 @@ Pertam | -4000000 | -65000 | -800000 | -3868928 | 66072 | -668928 |  | 30066.5 |
 -   **Other:**
     -   Light Blue (Lights): RGB(180,215,255)
     -   Dark Blue (Display BG): RGB(3,9,15)
+
 
 ## <span id="SE-autolcd">Common AutoLCD Commands</span>
 
