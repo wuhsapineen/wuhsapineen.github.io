@@ -22,14 +22,8 @@ Table of Contents
 1.  [City of Heroes][4]
 1.  [Destiny 2][2]
 1.  [Space Engineers][3]
-    -   [Todo][3-1]
-    -   [Notes][3-2]
-        -   [Laser Antennae][3-3]
-        -   [Coordinates][3-4]
-        -   [Colors][3-5]
-        -   [Other][3-6]
-1.   [Techtonica][1]
-        -   [ToDo][1-1]
+1.  [Techtonica][1]
+    -   [ToDo][1-1]
 1.  [Games On C:\\][998]
 1.  [About][999]
 
@@ -97,14 +91,6 @@ Table of Contents
 [1-1]: techtonica.md#todo
 [2]: destiny-2.md
 [3]: space-engineers.md
-<!--
-[3-1]: #SE-todo
-[3-2]: #SE-notes
-[3-3]: #SE-laserantennae
-[3-4]: #SE-coords
-[3-5]: #SE-colors
-[3-6]: #SE-other
--->
 [4]: city-of-heroes.md
 [5]: astro-empires.md
 [998]: #games-on-c "Games on C drive"
