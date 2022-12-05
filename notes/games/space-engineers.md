@@ -19,7 +19,7 @@ Table of Contents:
 -   [Colors][3-06]
 -   [Auto LCD][3-07]
 -   [Other][3-08]
--   [Ship Registry][3-10]
+-   [Ship Registry][3-09]
 
 ---
 Small mining outposts with mining drones and cargo haulers. <br />
@@ -97,13 +97,11 @@ Large cargo ships pick up at mining hubs and deliver to production facility. <br
     -   ~~Rebrand existing PAM drone with M80 colors~~
 
 
-## <span id="SE-notes">Notes</span>
-
-### <span id="SE-networkedgrids">Networked Grids</span>
+## <span id="SE-networkedgrids">Networked Grids</span>
 Remote control blocks must be placed on each grid with the grid name in its name. E.g. Remote Control - SpaceStation01
 -   SpaceStation01
 
-### <span id="SE-laserantennae">Laser Antennae</span>
+## <span id="SE-laserantennae">Laser Antennae</span>
 -   **Stations**
     -   LA-IceStation
         -   GPS:LA-IceStation:-87563.55:-31716.71:66516.79:
@@ -164,7 +162,7 @@ Remote control blocks must be placed on each grid with the grid name in its name
     -   LA-RelaySat03-02 - LA-MoonOrbitStationUpper
     -   LA-MoonOrbitStationLower - LA-MoonStation02
 
-### <span id="SE-coords">Coordinates</span>
+## <span id="SE-coords">Coordinates</span>
 
 -   **RDSR - Rogue Sappers**
     -   GPS:RDSR01:-70809.0942599733:-34070.1288381408:70024.7861692715:
@@ -175,7 +173,7 @@ Remote control blocks must be placed on each grid with the grid name in its name
 -   **UDHS - Unyielding Hauling Service**
     -   GPS:UDHS01:-84776.7402741437:-31475.8978549342:71974.4470085772
 
-#### Planets and Moons
+### Planets and Moons
 Name | X | Y | Z | Actual X | Actual Y | Actual Z | Offset | Radius | Diameter | GPS | GPS X | GPS Y | GPS Z
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
 Alien | 0 | 0 | 5600000 | 131072 | 131072 | 5731072 |  | 60000 | 120000 | GPS:Center of Alien:131072.50:131072.50:5731072.50:#FFF10000: | 131072.5 | 131072.5 | 5731072.5
@@ -189,7 +187,7 @@ Pertam | -4000000 | -65000 | -800000 | -3868928 | 66072 | -668928 |  | 30066.5 |
 
 
 
-### <span id="SE-naming-convention">Naming Convention</span>
+## <span id="SE-naming-convention">Naming Convention</span>
 
 -   ATS: Salvage and Rescue Ship
 -   ARS: Rescue and Salvage Ship
@@ -204,7 +202,7 @@ Pertam | -4000000 | -65000 | -800000 | -3868928 | 66072 | -668928 |  | 30066.5 |
 -    
 -   MD: Mining Drone
 
-### <span id="SE-colors">Colors</span>
+## <span id="SE-colors">Colors</span>
 
 -   **Blocks:**
 
@@ -221,7 +219,7 @@ Pertam | -4000000 | -65000 | -800000 | -3868928 | 66072 | -668928 |  | 30066.5 |
     -   Light Blue (Lights): RGB(180,215,255)
     -   Dark Blue (Display BG): RGB(3,9,15)
 
-### <span id="SE-autolcd">Common AutoLCD Commands</span>
+## <span id="SE-autolcd">Common AutoLCD Commands</span>
 
 ```
 Center P O W E R
@@ -233,10 +231,13 @@ PowerOut {G:Carrier Batteries} {Batteries Out}
 Another one
 ```
 
-### <span id="SE-other">Other</span>
+## <span id="SE-other">Other</span>
 
 
-## <span id="SE-ship-registry">Ship Registry</span>
+<br />
+
+---
+# <span id="SE-ship-registry">Ship Registry</span>
 
 - Ship name/number
 - Location (ship name if assigned to a carrier)
@@ -245,7 +246,8 @@ Another one
 | Ship Name | Assigned Location | Ship Type |
 | --- | --- | --- |
 | **Utility Ships** |
-| a | b | c |
+| AT-001 | CVU-001 | M80 Tug |
+| AT-002 | CVU-002 | M80 Tug |
 | **Mining Carriers** |
 | CVU-001 | Earth-like Orbit | M80 Mining Carrier |
 | CVU-002 | Earth-like Orbit | M80 Mining Carrier |
