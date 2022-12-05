@@ -17,7 +17,6 @@ ul {
 	list-style-type:none; 
     margin: 0px 0px 0px -35px;
 }
-.enhancement {  }
 .warning { font-style: italic; }
 .quantity { max-width: 35px; }
 
