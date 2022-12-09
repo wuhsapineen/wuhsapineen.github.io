@@ -19,10 +19,16 @@ reference:
 1.  [Applications][1]
 1.  [Games][2]
 1.  [How-To][3]
+-   [ToDo List][*]
 
+---
+<br />
+
+Create a js todo list with form controls and on-the-fly editing features.
 
 <!-- reference-links -->
 [1]: apps.md
 [2]: games/index.md
 [3]: how-to.md
+[*]: #todolist
 <!-- endreference-links -->
