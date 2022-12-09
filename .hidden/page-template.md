@@ -12,8 +12,6 @@ reference:
 ---
 <br />
 
-# Page Title
-
 Table of Contents
 
 1.  [Item 1][1]
