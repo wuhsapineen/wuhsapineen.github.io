@@ -16,12 +16,12 @@ reference:
         <div id="enhancements_avatarofantares"></div>
 -   Ebony Beta
     -   Incarnate Abilities:
-        -   Alpha: Tier4 Vigor
-        -   Destiny: Tier4 Ageless
-        -   **Interface: Tier3 Diagmagnetic**
-        -   Lore: Tier4 Talons of Vengeance
-        -   **Judgement: Tier3 Void**
-        -   **Hybrid: Tier3 Support**
+        -   Alpha: Tier4 Vigor (Core Paragon)
+        -   Destiny: Tier4 Ageless (Core Epiphany)
+        -   **Interface: Tier3 Diagmagnetic** (Radial Flawless)
+        -   Lore: Tier4 Talons of Vengeance (Radial Superior)
+        -   Judgement: Tier4 Void (Core Final)
+        -   Hybrid: Tier4 Support (Core Embodiment)
 -   Zipper Surly
     -   Badges:
         -   one
