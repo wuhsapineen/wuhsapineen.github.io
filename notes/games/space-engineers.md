@@ -15,11 +15,13 @@ Table of Contents:
 -   [Networked Grids][3-02]
 -   [Laser Antennae][3-03]
 -   [Coordinates][3-04]
--   [Naming Convention][3-05]
 -   [Colors][3-06]
 -   [Auto LCD][3-07]
 -   [Other][3-08]
+-   [Station Registry][3-11]
 -   [Ship Registry][3-09]
+-   [Naming Convention][3-05]
+-   [Fleet Blueprints][3-10]
 
 
 ---
@@ -94,14 +96,18 @@ Large cargo ships pick up at mining hubs and deliver to production facility (req
         -   
 -   ~~Mining Drones~~ 
     -   **Name:** MD-###
-    -   **Blueprint:** M80 Mining Drone
+    -   **Blueprint:** M80 Hydro Mining Ship
     -   ~~Rebrand existing PAM drone with M80 colors~~
 
 
 ## <span id="SE-networkedgrids">Networked Grids</span>
 Remote control blocks must be placed on each grid with the grid name in its name. E.g. Remote Control - SpaceStation01
 -   SpaceStation01
+-   ProductionStation
 
+
+.
+<br />
 ## <span id="SE-laserantennae">Laser Antennae</span>
 -   **Stations**
     -   LA-IceStation
@@ -120,8 +126,6 @@ Remote control blocks must be placed on each grid with the grid name in its name
         -   GPS:LA-MoonOrbitStationLower:23081.96:125852.98:-113061.1:
     -   LA-ProductionStation01
         -   not exists
-    -   LA-UraniumMine01
-        -   GPS:LA-UraniumMine01:-102230.98:-35451.72:69017.63:
 -   **Comms Relay Antennae**
     -   LA-CommsRelay-01
         -   GPS:LA-CommsRelay-01:-85422.2:-31278.44:69662.29:
@@ -157,18 +161,21 @@ Remote control blocks must be placed on each grid with the grid name in its name
     -   LA-SpaceStation01-01 - LA-RelaySat01-02
     -   LA-SpaceStation01-02 - LA-CommsRelay-08
     -   LA-ProductionStation01 - LA-CommsRelay-01
-    -   LA-CommsRelay-02 - LA-UranuumMine01
     -   LA-RelaySat02-01 - LA-CommsRelay-03
     -   LA-RelaySat02-02 - LA-RelaySat03-01
     -   LA-RelaySat03-02 - LA-MoonOrbitStationUpper
     -   LA-MoonOrbitStationLower - LA-MoonStation02
 
+
+.
+<br />
 ## <span id="SE-coords">Coordinates</span>
 
 -   **RDSR - Rogue Sappers**
-    -   GPS:RDSR01:-70809.0942599733:-34070.1288381408:70024.7861692715:
+    -   GPS:RDSR01:-70809.1:-34070.1:70024.8:
 -   **SPRT - Space pirates**
-    -   GPS:SPRT01:-94638.0889999084:-34170.0373393379:64923.3559256815:
+    -   GPS:SPRT01:-94638.0:-34170.0:64923.4:
+    -   GPS:SPRT02:-103714.3:-23010.5:72986.6:
 -   **SPDC - Specialized Drilling Consortium**
     -   GPS:SPDC01:-93342.4857315367:-34229.8181152937:63928.587241044
 -   **UDHS - Unyielding Hauling Service**
@@ -187,22 +194,8 @@ Europa | 900000 | 0 | 1600000 | 1031072 | 131072 | 1731072 |  | 9500 | 19000 | G
 Pertam | -4000000 | -65000 | -800000 | -3868928 | 66072 | -668928 |  | 30066.5 | 60133 | GPS:Center of Pertam:-3967231.50:-32231.50:-767231.50:#FFF10000: |  |  | 
 
 
-
-## <span id="SE-naming-convention">Naming Convention</span>
-
--   ATS: Salvage and Rescue Ship
--   ARS: Rescue and Salvage Ship
--   AKD: Cargo Ship, Dock
--   AP: Transport
--   AR: Repair Ship
--   AT: Fleet Tug
--   ATR: Rescue Tug
--   CVU: Carrier Utility
--   LCU: Landing Craft Utility
--   YT: Yard Tug
--    
--   MD: Mining Drone
-
+.
+<br />
 ## <span id="SE-colors">Colors</span>
 
 -   **Blocks:**
@@ -221,16 +214,38 @@ Pertam | -4000000 | -65000 | -800000 | -3868928 | 66072 | -668928 |  | 30066.5 |
     -   Dark Blue (Display BG): RGB(3,9,15)
 
 
+.
+<br />
+---
 ## <span id="SE-autolcd">Common AutoLCD Commands</span>
 
 ```
+Center - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Center P O W E R
+Center - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Echo
 PowerStored {G:Carrier Batteries} {Batteries Stored}
+Echo
 PowerIn {G:Carrier Batteries} {Batteries In}
+Echo
 PowerOut {G:Carrier Batteries} {Batteries Out}
 ```
 ```
-Another one
+Center - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Center T A N K S
+Center - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Echo 
+Tanks * Hydrogen
+Echo
+Tanks * Oxygen
+```
+```
+Center - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Center C A R G O
+Center - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cargo {G:Cargo Containers}
+Echo ---   ---   ---   ---   ---   ---   ---   ---   ---
+InvListX * all
 ```
 
 ## <span id="SE-other">Other</span>
@@ -239,6 +254,20 @@ Another one
 <br />
 
 ---
+# <span id="SE-station-registry">Station Registry</span>
+
+- Station name/number (As indicated on the remote control block)
+- Station Type (See [naming convention][3-05])
+- Location (GPS on the remote control block)
+
+| Station Name | Station Type | GPS Location |
+| --- | --- | --- |
+| SpaceStation01 | 
+
+
+.
+<br />
+
 # <span id="SE-ship-registry">Ship Registry</span>
 
 - Ship name/number
@@ -250,26 +279,77 @@ Another one
 | **Utility Ships** |
 | AT-001 | CVU-001 | M80 Tug |
 | AT-002 | CVU-002 | M80 Tug |
+| AT-003 | AKL-001 | M80 Tug |
+| AT-004 | AKL-001 | M80 Tug |
+| LCU-001 | Earth-like Orbit | M80 Heavy Lander |
+| **Cargo Ships** |
+| AKL-001 | Earth-like Orbit | M80 Super Heavy Freighter |
+| AKM-001 | Earth-like Orbit | M80 Heavy Freighter |
+| AKS-001 | Earth-like Orbit | M80 Light Freighter |
 | **Mining Carriers** |
 | CVU-001 | Earth-like Orbit | M80 Mining Carrier |
 | CVU-002 | Earth-like Orbit | M80 Mining Carrier |
-| **Mining Drones** |
-| MD-001 | CVU-001 | M80 Mining Drone |
-| MD-002 | CVU-001 | M80 Mining Drone |
-| MD-003 | CVU-001 | M80 Mining Drone |
-| MD-004 | CVU-001 | M80 Mining Drone |
-| MD-005 | CVU-001 | M80 Mining Drone |
-| MD-006 | CVU-001 | M80 Mining Drone |
-| MD-007 | CVU-001 | M80 Mining Drone |
-| MD-008 | CVU-001 | M80 Mining Drone |
-| MD-009 | CVU-002 | M80 Mining Drone |
-| MD-010 | CVU-002 | M80 Mining Drone |
-| MD-011 | CVU-002 | M80 Mining Drone |
-| MD-012 | CVU-002 | M80 Mining Drone |
-| MD-013 | CVU-002 | M80 Mining Drone |
-| MD-014 | CVU-002 | M80 Mining Drone |
-| MD-015 | CVU-002 | M80 Mining Drone |
-| MD-016 | CVU-002 | M80 Mining Drone |
+| **Mining Ships** *(cockpit)* |
+| MSH-001 | CVU-001 | M80 Hydro Mining Ship |
+| MSH-002 | CVU-001 | M80 Hydro Mining Ship |
+| MSH-003 | CVU-001 | M80 Hydro Mining Ship |
+| MSH-004 | CVU-001 | M80 Hydro Mining Ship |
+| MSH-005 | CVU-001 | M80 Hydro Mining Ship |
+| MSH-006 | CVU-001 | M80 Hydro Mining Ship |
+| MSH-007 | CVU-001 | M80 Hydro Mining Ship |
+| MSH-008 | CVU-001 | M80 Hydro Mining Ship |
+| MSH-009 | CVU-002 | M80 Hydro Mining Ship |
+| MSH-010 | CVU-002 | M80 Hydro Mining Ship |
+| MSH-011 | CVU-002 | M80 Hydro Mining Ship |
+| MSH-012 | CVU-002 | M80 Hydro Mining Ship |
+| MSH-013 | CVU-002 | M80 Hydro Mining Ship |
+| MSH-014 | CVU-002 | M80 Hydro Mining Ship |
+| MSH-015 | CVU-002 | M80 Hydro Mining Ship |
+| MSH-016 | CVU-002 | M80 Hydro Mining Ship |
+| MSI-001 | AKL-001 | M80 Ion Mining Ship |
+| MSI-002 | AKL-001 | M80 Ion Mining Ship |
+| **Mining Drones** *(no cockpit)* |
+| --- | --- | --- |
+
+
+## <span id="SE-naming-convention">Naming Convention</span>
+**Stations**
+-   PD: Production Depot
+-   RC: Refueling Center
+-   RP: Respawn Point
+-   SY: Shipyard
+
+**Ships**
+-   ARS: Rescue and Salvage Ship
+-   AKS: Cargo Ship, Small
+-   AKM: Cargo Ship, Medium
+-   AKL: Cargo Ship, Large
+-   AP: Transport
+-   AR: Repair Ship (welder)
+-   ATF: Fleet Tug
+-   ATR: Rescue Tug
+-   ATY: Yard Tug
+-   CVU: Carrier Utility
+-   LCU: Landing Craft Utility
+-   MSH: Mining Ship, Hydrogen
+-   MSI: Mining Ship, Ion
+-   MDH: Mining Drone, Hydrogen
+-   MDI: Mining Drone, Ion
+
+
+## <span id="SE-fleet-blueprints">Fleet Blueprints</span>
+
+-   M80 Yard Tug \[ATY-###]
+-   ***M80 Fleet Tug \[ATF-###] (not exists)***
+-   M80 Super Heavy Freighter \[AKL-###]
+-   M80 Heavy Freighter \[AKM-###]
+-   ***M80 Light Freighter \[AKS-###] (not exists)***
+-   M80 Mining Carrier \[CVU-###]
+-   M80 Hydro Mining Ship \[MSH-###]
+-   M80 Ion Mining Ship \[MSI-###]
+-   ***M80 Hydro Mining Drone \[MDH-###] (not exists)***
+-   ***M80 Ion Mining Drone \[MDI-###] (not exists)***
+
 
 
 .
@@ -286,4 +366,6 @@ Another one
 [3-07]: #SE-autolcd
 [3-08]: #SE-other
 [3-09]: #SE-ship-registry
+[3-10]: #SE-fleet-blueprints
+[3-11]: #SE-station-registry
 <!-- end reference links -->
