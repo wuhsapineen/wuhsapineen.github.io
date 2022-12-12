@@ -35,7 +35,9 @@ Table of Contents
  ## Buffs
     
   ### Entertainer
-/tt Could you buff me with Stamina (10/10) and Flush With Success (5/5), please?
+```
+/tt Good evening! Could you buff me with Stamina 10 and Flush With Success 5, please?
+```
 #### Four seems to be the same size as regular text
 
    
