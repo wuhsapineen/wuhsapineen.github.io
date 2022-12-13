@@ -26,12 +26,13 @@ reference:
 <br />
 
 Create a js todo list with form controls and on-the-fly editing features.
+-   Implement workers to speed up loading of data
 -   Create new lines on-the-fly
 -   Multiple form control options such as radio, check, text, date and time
 -   Check box to mark items as completed--possibly move them to end of the completed list?
 -   Drag and drop items on-the-fly and save the results immediately
 -   Use local file storage (cache/cookies) to store todo list and keep it private
--   Save to and Load from file
+-   Save to and Load from file, import and export encrypted strings (checksum)
 -   Hierarchical lists, for items with multiple steps
 -   Undo and Redo functions
 
