@@ -24,7 +24,14 @@ Table of Contents
 
 # Item 1
 
+
+.
+<br />
+<span id="item2" hidden="true">2</span>
+
+# Item 2
+
 <!-- reference-links -->
-[1]: item1.md "title"
-[2]: item2.md "title"
+[1]: #item1 "title"
+[2]: #item2 "title"
 <!-- endreference-links -->
