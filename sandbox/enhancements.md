@@ -57,19 +57,10 @@ var arrayEnhancements = {
 };
 var arrayDisplayed = [];
 </script>
+<br />
+<br />
 
-<pre class="mermaid">
-mindmap
-  root((Cannon))
-    [Code]
-        (Web)
-    [Spirit]
-    [Something Else]
-</pre>
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
+# Enhancements
 
 <form id="formEnhancementSlots">
   <label ><b>Enhancement Slots:</b></label>
