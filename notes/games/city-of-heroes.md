@@ -10,21 +10,40 @@ reference:
 - []
 
 ---
-## Characters
+## Main Characters
+-   Ebony Beta
+    -   Incarnate Abilities:
+        -   Alpha: Tier4 (Vigor Core Paragon)
+        -   Destiny: Tier4 (Ageless Core Epiphany)
+        -   **Interface: Tier3** (Diagmagnetic Radial Flawless)
+        -   Lore: Tier4 (Talons of Vengeance Radial Superior Ally)
+        -   Judgement: Tier4 (Void Core Final)
+        -   Hybrid: Tier4 (Support Core Embodiment)
+-   Zipper Surly
+    -   Incarnate Abilities:
+        -   Alpha: Tier4 (Spiritual Core Paragon)
+        -   Destiny: 
+            -   Tier4 (Ageless Core Epiphany)
+            -   Tier4 (Rebirth Radial Epiphany)
+            -   Tier3 (Incandescence Total Core Invocation \[T4: Core Epiphany])
+        -   Interface: 
+            -   Tier4 (Reactive Radial Flawless Interface)
+            -   Tier4 (Diagmatic Radial Flawless Interface)
+        -   Lore: 
+            -   Tier4 (Banished Pantheon Radial Superior Ally)
+            -   Tier4 (Demons Radial Superior Ally)
+            -   Tier4 (Longbow Radal Superior Ally)
+        -   Judgement: 
+            -   Tier4 (Ion Core Final Judgement)
+            -   Tier4 (Pyronic Core Final Judgement)
+        -   Hybrid: Tier4 (Assault Radial Embodiment)
+
+## Slotting In Progress Characters
 -   Avatar of Antares
     -   Enhancements:
         <div id="enhancements_avatarofantares"></div>
--   Ebony Beta
-    -   Incarnate Abilities:
-        -   Alpha: Tier4 Vigor (Core Paragon)
-        -   Destiny: Tier4 Ageless (Core Epiphany)
-        -   **Interface: Tier3 Diagmagnetic** (Radial Flawless)
-        -   Lore: Tier4 Talons of Vengeance (Radial Superior)
-        -   Judgement: Tier4 Void (Core Final)
-        -   Hybrid: Tier4 Support (Core Embodiment)
--   Zipper Surly
-    -   Badges:
-        -   one
+-   Eido Bodhi
+-   Professor Flashover
 ## Links
 -   [Homecoming Wiki][4-1]
 -   [Badger][4-2]
