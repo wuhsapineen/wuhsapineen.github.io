@@ -16,9 +16,9 @@ reference:
 <head>
 <style type="text/css">
 #formEnhancementSlots { line-height: 1.8; }
-#ulEnhancementSlots {
+#ulEnhancementSlots, ulEnhancementAdd {
   list-style-type: none;
-  margin: 0px 0px 0px -35px;
+  margin: 0px 0px 0px -25px;
 }
 #nav-list { 
   list-style-type: none;  
@@ -79,8 +79,8 @@ var arrayDisplayed = [];
 
 <div id="footer-nav">
   <ul id="nav-list">
-    <li><a href="{{{ enhancements.md }}}">Enhancements</a></li>
-    <li><a href="{{{ new.md }}}">Sandbox New</a></li>
+    <li><a href="enhancements">Enhancements</a></li>
+    <li><a href="new">Sandbox New</a></li>
     <li><a href="https://mermaid.live/" target="_blank">Mermaid</a></li>
   </ul>
 </div>
@@ -105,7 +105,7 @@ var arrayDisplayed = [];
     </li> -->
     <!-- <li id="99">Accuracy (1) <input type="button" onclick="enhancementEdit(99)" value="Edit" /> <input type="button" onclick="enhancementRemove(99)" value="Remove" /><br /></li> -->
   </ul>
-  <ul>
+  <ul id="ulEnhancementAdd">
     <li id="add_btn">
       <input type="button" onclick="enhancementAdd()" value="Add" />
 	</li>
@@ -114,13 +114,21 @@ var arrayDisplayed = [];
 </form>
 <br />
 <br />
-<div id="ToDo">
-<h3>To do:</h3>
-<ul>
-<li>Option to export JSON data</li>
-<li>Option to save JSON data to local drive</li>
-</ul>
-</div>
+<table>
+  <thead>
+  <tr>
+  <th>T O D O</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><div id="todolist"><ul><li>Some thing one</li><li>Some thing two</li></ul></div></td>
+  </tr>
+  <tr>
+  <td>NEW, UNDO, and REDO buttons</td>
+  </tr>
+  </tbody>
+  </table>
 <br />
 <br />
 
