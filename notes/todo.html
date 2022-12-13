@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table.todo {
+  margin: 18px 9px;
+}
+table th {
+  background-color:;
+}
+ul.todo {
+  list-style-type: none;
+  margin: 0px;
+  padding: 9px;
+  overflow: hidden;
+}
+ul.multistep {
+  list-style-type: disc;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+li {
+  text-align: left;
+}
+li a {
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 15px;
+}
+li a:hover {
+  background-color: #111111;
+}
+.todo li {
+  font-size: 12pt;
+  padding: 0px 6px;
+}
+.todo li .todo-item {
+  padding: 0px 9px;
+}
+.todo li .button, .todo .button {
+  background-color: #262626;
+  border: 1px solid #B4D7FF;
+  border-radius: 6px;
+  color: #F5F5F5;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  float: none;
+  display: inline-block;
+  font-size: 9pt;
+  margin: 6px 3px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.todo li .button:hover, .todo .button:hover {
+  background-color: #03090F;
+  color: #FFD700;
+  border: 1px solid #FFD700;
+}
+</style>
+</head>
+<body onload="historyDid()">
+<br />
+<table class="todo" width="60%">
+<thead><tr>
+<th>T O D O</th>
+</tr></thead>
+<tbody>
+<tr><td>
+<form><ul class="todo">
+  <li id="listItem_1"><input type="checkbox" id="item_1" onclick="boxTicked('1')" name="item_1" /><label for="item_1" class="todo-item">Create new lines on the fly</label><input type="hidden" id="itemCompleted_1" value="false" /><input type="button" class="button" value="Edit" id="editButton" onclick="itemEdit(1)" /></li>
+  <li id="listItem_2"><input type="text" id="item_2" /><input type="button" class="button" value="Save" id="saveButton" onclick="itemSave(2)" /><input type="button" class="button" value="Remove" id="removeButton" onclick="itemRemove(2)" /><br />
+  <ul class="multistep"><li id="addedStep_2_1"><input type="text" id="item_2_step_1" /><input type="button" class="button" value="Save" id="saveButton" onclick="stepSave(2, 1)" /><input type="button" class="button" value="Remove" id="removeButton" onclick="stepRemove(2, 1)" /></li>
+  <li id="addedStep_2_2"><input type="button" class="button" value="Add Step" id="addStep" onclick="stepAdd(2, 2)" /></li></ul>
+  </li>
+</ul>
+</form>
+</td></tr>
+<tr><td class="todo">
+<input type="button" class="button" value="Add" id="addButton" onclick="itemAdd()" /><input type="button" class="button" value="Undo" id="undoButton" onclick="historyUndo()" disabled="true" /><input type="button" class="button" value="Redo" id="redoButton" onclick="historyRedo()" disabled="true" /> <span id="historyCount"></span>
+</td></tr>
+</tbody>
+</table>
+<span id="test"></span>
+<br />
+<input type="color" id="colorPicker" /> &nbsp; <span id="testDisplay"></span><br />
+<br />
+<div id="color-scheme"><ul>
+<li id="background"><b>Dark Blue Custom:</b> RGB(3, 9, 15), HEX(#03090F);</li>
+<li id="text"><b>Light Blue Custom:</b> RGB(180, 215, 255), HEX(#B4D7FF);</li>
+<li id="highlight"><b>White Smoke:</b> RGB(245, 245, 245), HEX(#F5F5F5);</li>
+<li id="medgray"><b>Medium Gray:</b> RGB(150, 150, 150), HEX(#969696);</li>
+<li id="shadow"><b>Dark Gray:</b> RGB(38, 38, 38), HEX(#262626);</li>
+<li id="accent"><b>Gold:</b> RGB(255, 215, 0), HEX(#FFD700);</li>
+<li id="accent2"><b>Yellow-Orange:</b> RGB(255, 174, 66), HEX(#FFAE42);</li>
+</ul></div>
+<input type="button" class="button" value="Storage Display" id="storageDisplay" onclick="storageDisplay()" /><div id="displayStorage"></div>
+
+<script type="text/javascript">
+// test
+const test = document.getElementById("testDisplay");
+function testUpdate(input) {
+	var testText = input;
+    test.innerHTML = testText;
+}
+// endtest
+var historyLog = [];
+var undoLog = [];
+const addButton = document.getElementById("addButton");
+const undoButton = document.getElementById("undoButton");
+const redoButton = document.getElementById("redoButton");
+
+function historyUndo() {
+	console.log("Undo");
+	var unDid = historyLog.pop();
+    console.log("Undid: "+unDid);
+    undoLog.push(unDid);
+	historyDid();
+}
+function historyRedo() {
+	console.log("Redo");
+    var reDid = undoLog.pop();
+    console.log("Redid: "+reDid);
+    historyLog.push(reDid);
+	historyDid();
+}
+function historyDid() {
+    if (historyLog.length > 0) {
+		console.log(historyLog);
+		undoButton.disabled = false;
+        undoButton.style.opacity = "1";
+        //continue;
+	}
+	else {
+        console.log(historyLog);
+        undoButton.disabled = true;
+        undoButton.style.opacity = "0.5";
+		//continue;
+	}
+    if (undoLog.length > 0) {
+    	console.log(undoLog);
+        redoButton.disabled = false;
+        redoButton.style.opacity = "1";
+        //continue;
+    }
+    else {
+    	console.log(undoLog);
+        redoButton.disabled = true;
+        redoButton.style.opacity = "0.5";
+        //continue;
+    }
+}
+function historyUndid() {
+
+}
+function historyRedid() {
+
+}
+
+function boxTicked(id) {
+	//console.log("Item Completed");
+    var itemCompleted = document.getElementById("itemCompleted_" + id);
+    var lineItem = document.getElementById("listItem_" + id);
+    if (itemCompleted.value == "false") {
+    	lineItem.style.textDecoration = "line-through";
+        itemCompleted.value = "true";
+    }
+    else {
+        lineItem.style.textDecoration = "none";
+        itemCompleted.value = "false";
+    }
+}
+
+function itemAdd(id) {
+	console.log("Add");
+    var newLineContent = "";
+	var historyAction = new Array("Action, Effect");
+	historyLog.push(historyAction);
+	historyDid();
+}
+function stepAdd(itemID, stepID) {
+	console.log("Added step " + itemID + "_" + stepID);
+}
+function stepSave(itemID, stepID) {
+	console.log("Saved step " + itemID + "_" + stepID);
+}
+function stepRemove(itemID, stepID) {
+	console.log("Removed step " + itemID + "_" + stepID);
+}
+function itemEdit(id) {
+console.log("Editing item " + id);
+}
+function itemSave(id) {
+console.log("Saved item " + id);
+}
+function itemRemove(id) {
+console.log("Removed item " + id);
+}
+function storageDisplay() {
+	for (let i = 0; i < localStorage.length; i++) {
+		console.log(localStorage.key(i) + ": " + localStorage.getItem(localStorage.key(i)));
+	}
+}
+</script>
+</body>
+</html>
