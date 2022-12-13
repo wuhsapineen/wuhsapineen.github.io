@@ -11,7 +11,21 @@ reference:
 
 ---
 ## Main Characters
--   Ebony Beta
+-   B-Wize
+    -
+    -   **Master Mind:** Thugs / Radiation Emission 
+    -   **Debuffs, Minor heals, Minion DPS, Minor crowd control**
+    -   Incarnate Abilities:
+        -   Alpha: Tier3 (Intuition Partial Radial Revamp \[T4:Radial Paragon])
+        -   Destiny: Tier4 (Ageless Core Epiphany)
+        -   Interface: None \[T4: Diagmatic Radial Flawless Interface]
+        -   Lore: None \[]
+        -   Judgement: None \[]
+        -   Hybrid: None \[]
+-   Ebony Beta    
+    -   
+    -   **Corruptor:** Dark Blast / Radiation Emission
+    -   **Debuffs, Minor heals, Ranged DPS**
     -   Incarnate Abilities:
         -   Alpha: Tier4 (Vigor Core Paragon)
         -   Destiny: Tier4 (Ageless Core Epiphany)
@@ -20,6 +34,9 @@ reference:
         -   Judgement: Tier4 (Void Core Final)
         -   Hybrid: Tier4 (Support Core Embodiment)
 -   Zipper Surly
+    -   
+    -   **Brute:** Super Strength / Fiery Aura
+    -   **Tank, Taunt, Melee DPS**
     -   Incarnate Abilities:
         -   Alpha: Tier4 (Spiritual Core Paragon)
         -   Destiny: 
@@ -40,10 +57,21 @@ reference:
 
 ## Slotting In Progress Characters
 -   Avatar of Antares
+    -
+    -   **Controller:** Fire Control / Radiation Emission
     -   Enhancements:
         <div id="enhancements_avatarofantares"></div>
 -   Eido Bodhi
+    -
+    -   **Scrapper:** Martial Arts / Ice Armor
 -   Professor Flashover
+    -
+    -   **Controller:** Fire Control / Kinetics
+
+## Alternate/Unslotted Characters
+-   Dengi Miyamoto
+-   Zipper of Lenity
+
 ## Links
 -   [Homecoming Wiki][4-1]
 -   [Badger][4-2]
