@@ -1,5 +1,5 @@
 ---
-title: 
+title: Motivation
 description: 
 created: 2022-12-11 00:41:57 +1000
 tags: notes, general, motivation
