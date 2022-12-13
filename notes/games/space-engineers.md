@@ -204,9 +204,10 @@ Pertam | -4000000 | -65000 | -800000 | -3868928 | 66072 | -668928 |  | 30066.5 |
 <li id="background"><b>Dark Blue Custom:</b> RGB(3, 9, 15), HEX(#03090F);</li>
 <li id="text"><b>Light Blue Custom:</b> RGB(180, 215, 255), HEX(#B4D7FF);</li>
 <li id="highlight"><b>White Smoke:</b> RGB(245, 245, 245), HEX(#F5F5F5);</li>
+<li id="medgray"><b>Medium Gray:</b> RGB(150, 150, 150), HEX(#969696);</li>
+<li id="shadow"><b>Dark Gray:</b> RGB(38, 38, 38), HEX(#262626);</li>
 <li id="accent"><b>Gold:</b> RGB(255, 215, 0), HEX(#FFD700);</li>
 <li id="accent2"><b>Yellow-Orange:</b> RGB(255, 174, 66), HEX(#FFAE42);</li>
-<li id="shadow"><b>Dark Gray:</b> RGB(38, 38, 38), HEX(#262626);</li>
 </ul></div>
 
 -   **Other:**
