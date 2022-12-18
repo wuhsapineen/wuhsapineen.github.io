@@ -34,6 +34,18 @@ reference:
   padding: 0px 9px 0px 9px;
   text-decoration: none;
 }
+.todo li .button {
+  background-color: #262626;
+  border: 1px solid #B4D7FF;
+  color: #F5F5F5;
+  padding: 3px 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12pt;
+  margin: 6px 3px;
+  cursor: pointer;
+}
 .warning { font-style: italic; }
 .quantity { max-width: 35px; }
 
@@ -133,11 +145,6 @@ var arrayDisplayed = [];
 <br />
 
 <script type="text/javascript">
-// --- test ---
-const divTest = document.getElementById("test");
-const divResults = document.getElementById("results");
-// --- endtest ---
-
 	// Declare variables
     enhIndex = 0;
     
@@ -194,19 +201,19 @@ const divResults = document.getElementById("results");
         
         // check if enhancement is already saved
 		if (arrayDisplayed.includes(enhName)) { 
-        	// write warning at right of line that enhancement is already used
-            var warning = document.getElementById("warning_" + id).innerHTML = " ! - Enhancement already slotted.";
+      // write warning at right of line that enhancement is already used
+      var warning = document.getElementById("warning_" + id).innerHTML = " ! - Enhancement already slotted.";
 		}
         
-	   	else { 
-			// set list item contents (savedLine)
-       		var savedLine = '<span id="enhIndex_' + id + '" hidden="true">' + enhIndex + '</span><span id="enhName_' + id + '">' + enhName + '</span><span id="enhValue_' + id + '" hidden="true">' + enhValue + '</span> (<span id="enhQty_' + id + '">' + enhQty + '</span>) <input type="button" onclick="enhancementEdit(' + id + ')" value="Edit" /> <input type="button" onclick="enhancementRemove(' + id + ')" value="Remove" /><br />\n';
-       		// get list item to modify
-       		var modifyLi = document.getElementById(id);
-       		// replace contents of list item (id) with input values
-			modifyLi.innerHTML = savedLine;                
-			// add entry to array of displayed enhancements
-        	arr.push(enhName);
+	  else { 
+		  // set list item contents (savedLine)
+     	var savedLine = '<span id="enhIndex_' + id + '" hidden="true">' + enhIndex + '</span><span id="enhName_' + id + '">' + enhName + '</span><span id="enhValue_' + id + '" hidden="true">' + enhValue + '</span> (<span id="enhQty_' + id + '">' + enhQty + '</span>) <input type="button" onclick="enhancementEdit(' + id + ')" value="Edit" /> <input type="button" onclick="enhancementRemove(' + id + ')" value="Remove" /><br />\n';
+     	// get list item to modify
+     	var modifyLi = document.getElementById(id);
+     	// replace contents of list item (id) with input values
+		  modifyLi.innerHTML = savedLine;                
+		  // add entry to array of displayed enhancements
+     	arr.push(enhName);
 		}
     }
     
