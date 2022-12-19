@@ -16,10 +16,12 @@ reference:
 
 ##### Navigation
 
-1.  [Applications][1]
-1.  [Games][2]
-1.  [How-To][3]
-1.  [Motivation][4]
+1.  [Applications][apps]
+1.  [Games][games]
+1.  [How-To][howto]
+1.  [General][general]
+    1.  [Motivation][motivation]
+    1.  [Nutrition][nutrition]
 -   [ToDo List][*]
 
 ---
@@ -46,9 +48,10 @@ Create a js todo list with form controls and on-the-fly editing features.
 | NEW, UNDO, and REDO buttons |
 
 <!-- reference-links -->
-[1]: apps.md
-[2]: games/index.md
-[3]: how-to.md
-[4]: general/motivation.md
+[apps]: apps.md
+[games]: games/index.md
+[howto]: how-to.md
+[motivation]: general/motivation.md
+[nutrition]: general/nutrition.md
 [*]: #todolist
 <!-- endreference-links -->
