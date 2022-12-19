@@ -22,8 +22,6 @@ Table of Contents
 1.  [City of Heroes][4]
 1.  [Destiny 2][2]
 1.  [Space Engineers][3]
-1.  [Techtonica][1]
-    -   [ToDo][1-1]
 1.  [Games On C:\\][998]
 1.  [About][999]
 
