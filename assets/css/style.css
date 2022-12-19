@@ -21,8 +21,8 @@
     --shadow: var(--dark-gray);
 }
 body {
-    color: var(--text) !important;
-    background: var(--background) !important;
+    color: var(--shadow) !important;
+    background: var(--highlight) !important;
 }
 
 code { font-family: Monospace !important; }
