@@ -6,18 +6,21 @@ table.todo {
   margin: 18px 9px;
 }
 table th {
-  background-color:;
+  background-color: #F5F5F5;
+  display: block;
+  padding: 12px;
+}
+ul#multistep {
+  list-style-type: circle;
+  overflow: hidden;
+}
+ul#multistep li {
+  margin: -7px 0px 0px -20px;
 }
 ul.todo {
   list-style-type: none;
   margin: 0px;
   padding: 9px;
-  overflow: hidden;
-}
-ul.multistep {
-  list-style-type: disc;
-  margin: 0px;
-  padding: 0px;
   overflow: hidden;
 }
 li {
@@ -37,9 +40,10 @@ li a:hover {
   padding: 0px 6px;
 }
 .todo li .todo-item {
-  padding: 0px 9px;
+  padding: 0px 12px;
 }
-.todo li .button, .todo .button {
+.todo li label { padding: 0px 12px 0px 0px; }
+.button {
   background-color: #262626;
   border: 1px solid #B4D7FF;
   border-radius: 6px;
@@ -54,11 +58,13 @@ li a:hover {
   cursor: pointer;
   transition-duration: 0.3s;
 }
-.todo li .button:hover, .todo .button:hover {
+.button:hover, .button:hover {
   background-color: #03090F;
   color: #FFD700;
   border: 1px solid #FFD700;
 }
+
+textarea { resize: none; }
 </style>
 </head>
 <body onload="historyDid()">
@@ -69,21 +75,21 @@ li a:hover {
 </tr></thead>
 <tbody>
 <tr><td>
-<form><ul class="todo">
-  <li id="listItem_1"><input type="checkbox" id="item_1" onclick="boxTicked('1')" name="item_1" /><label for="item_1" class="todo-item">Create new lines on the fly</label><input type="hidden" id="itemCompleted_1" value="false" /><input type="button" class="button" value="Edit" id="editButton" onclick="itemEdit(1)" /></li>
-  <li id="listItem_2"><input type="text" id="item_2" /><input type="button" class="button" value="Save" id="saveButton" onclick="itemSave(2)" /><input type="button" class="button" value="Remove" id="removeButton" onclick="itemRemove(2)" /><br />
-  <ul class="multistep"><li id="addedStep_2_1"><input type="text" id="item_2_step_1" /><input type="button" class="button" value="Save" id="saveButton" onclick="stepSave(2, 1)" /><input type="button" class="button" value="Remove" id="removeButton" onclick="stepRemove(2, 1)" /></li>
-  <li id="addedStep_2_2"><input type="button" class="button" value="Add Step" id="addStep" onclick="stepAdd(2, 2)" /></li></ul>
-  </li>
+<form><ul class="todo" id="todobody">No items added.
 </ul>
 </form>
 </td></tr>
 <tr><td class="todo">
-<input type="button" class="button" value="Add" id="addButton" onclick="itemAdd()" /><input type="button" class="button" value="Undo" id="undoButton" onclick="historyUndo()" disabled="true" /><input type="button" class="button" value="Redo" id="redoButton" onclick="historyRedo()" disabled="true" /> <span id="historyCount"></span>
+<input type="button" class="button" value="Add" id="addButton" onclick="itemAdd()" /><input type="button" class="button" value="Undo" id="undoButton" onclick="historyUndo()" disabled="true" /><input type="button" class="button" value="Redo" id="redoButton" onclick="historyRedo()" disabled="true" />
 </td></tr>
 </tbody>
 </table>
+<div class="todo"><input type="button" class="button" onclick="todoSave()" value="Save All" /><input type="button" class="button" onclick="todoLoad()" value="Load" /></div>
 <span id="test"></span>
+<br />
+<table><tr>
+<td><textarea id="historyDisplay" rows="30" cols="90" readonly="true" wrap="soft"></textarea><br /></td>
+<td><div id="todoInformation"></div></td>
 <br />
 <input type="color" id="colorPicker" /> &nbsp; <span id="testDisplay"></span><br />
 <br />
@@ -96,7 +102,8 @@ li a:hover {
 <li id="accent"><b>Gold:</b> RGB(255, 215, 0), HEX(#FFD700);</li>
 <li id="accent2"><b>Yellow-Orange:</b> RGB(255, 174, 66), HEX(#FFAE42);</li>
 </ul></div>
-<input type="button" class="button" value="Storage Display" id="storageDisplay" onclick="storageDisplay()" /><div id="displayStorage"></div>
+<b>Storage: </b> <input type="button" class="button" value="Display" onclick="storageDisplay()" /> <input type="button" class="button" value="Clear" onclick="storageClear()" /><div id="displayStorage"></div><br />
+<b>Timer: </b> <input type="button" class="button" value="Start" onclick="sTimer('start')" /> <input type="button" class="button" value="Stop" onclick="sTimer('stop')" /><br />
 
 <script type="text/javascript">
 // test
@@ -105,13 +112,189 @@ function testUpdate(input) {
 	var testText = input;
     test.innerHTML = testText;
 }
+const infos = document.getElementById("todoInformation");
+var displayedInformation = "";
+function updateInformation() {
+	infos.innerHTML = displayedInformation;
+    setTimeout(updateInformation, 3000);
+}
+
+// Data info reporting:
+//const todoInformation = document.getElementById("todoInformation");
+var infoReport = [];
+if(typeof(Worker) !== "undefined") {
+	
+}
+
+// -- History Setup:
+// Actions:
+// Add Item: itemAdd()
+// Edit: itemEdit(id)
+// Save Item: itemSave(id)
+// Remove Item: itemRemove(id)
+// Checkbox Item: boxTickedItem(id)
+// Checkbox Step: boxTickedStep(id)
+// Add Step: stepAdd(itemID, stepID)
+// Edit Step: stepEdit(itemID, stepID)
+// Save Step: stepSave(itemID, stepID)
+// Remove Step: stepRemove(itemID, stepID)
+// Undo: historyUndo()
+// Redo: historyRedo()
+
+// data to be displayed
+// todoData = []
+// itemData = {"todoIndex": , "arrayPos": , "editing": false, "checked": false, "label": "", "steps": []}
+// formatting
 // endtest
+var todoData = {"todoIndex":0,"dataDisplay":[],"DATA":[]};
+var w = undefined;
 var historyLog = [];
 var undoLog = [];
+const historyDisplay = document.getElementById("historyDisplay");
 const addButton = document.getElementById("addButton");
 const undoButton = document.getElementById("undoButton");
 const redoButton = document.getElementById("redoButton");
 
+
+// Controls
+function itemAdd() {
+	// Gather information: todoIndex, dataDisplay, arrayPos, ...
+    var todoIndex = todoData.todoIndex; //int
+    var dataDisplay = todoData.dataDisplay; //array
+    var dataDisplayPosition = todoData.DATA.length; //int
+    // create data string from information
+    // {"todoIndex": id, "editing": true, "checked": false, "label": "", "steps": []}
+    var newDataLine = {"todoIndex": todoIndex, "arrayPos": dataDisplayPosition, "editing": true, "checked": false, "label": "", "steps": []};
+    // add record to todoData.DATA
+    todoData.DATA.push(newDataLine);
+	// add todoIndex to dataDisplay array
+	dataDisplay.push(dataDisplayPosition);
+    // increment todoData.todoIndex
+    todoData.todoIndex++;
+    // call update function
+    todoUpdate();
+    // check results
+    console.log(todoData.DATA[todoIndex]);
+}
+function itemEdit(id) {
+	var item = todoData.DATA[id];
+    var label = document.getElementById("itemLabel_"+id).innerHTML;
+	item.editing = true;
+    todoUpdate();
+    console.log(item);
+}
+function itemSave(id) {
+	var item = todoData.DATA[id];
+    var label = document.getElementById("itemText_"+id).value;
+    // change editing to false
+    item.editing = false;
+    // save label
+    item.label = label;
+    // call update function
+    todoUpdate();
+    // check results
+    console.log(item);
+    /*
+    var label = document.getElementById("itemText_"+id).value;
+    var modifyLi = document.getElementById("item_"+id);
+	console.log("Saved item_" + id);
+    
+	//var savedLineContent = savedItemContent(id, label);
+    console.log(savedLineContent);
+	//todoSave();
+    */
+}
+function itemRemove(id) {
+	// delete record from dataDisplay NOT FROM DATA
+    var dataDisplay = todoData.dataDisplay;
+    var listItem = todoData.DATA[id];
+    var arrayPos = listItem.arrayPos;
+    // iterate through dataDisplay to find id
+    console.log(dataDisplay);
+    for (item in dataDisplay) {
+    	if (dataDisplay[item] == id) {
+        	dataDisplay.splice(item, 1);
+            console.log("Item removed: "+item);
+            todoUpdate();
+            break;
+        }
+        else { 
+        	console.log("Item "+item+" not removed"); 
+            continue;
+		}
+    }
+    /*
+    todoData.dataDisplay.splice(arrayPos, 1);
+    console.log(item);
+    todoUpdate();
+    */
+}
+
+function boxTickedItem(id) {
+	console.log("Item Completed "+id);
+    const check = todoData.DATA[id];
+    if (check.checked == false) {
+    	check.checked = true;
+    	console.log(check);
+	} else {
+    	check.checked = false;
+        console.log(check);
+    }
+    
+    
+    //lineItem.style.textDecoration = "line-through";
+    //updateTodoList();
+}
+function boxTickedStep(itemID, stepID) {
+	console.log("Item Completed "+itemID+"_"+stepID);
+    const check = todoData.DATA[itemID]
+    console.log(check.steps[stepID].label);
+    //check.checked = true;
+    //console.log(check);
+}
+
+function stepAdd(itemID, stepID) {
+	console.log("Added step " + itemID + "_" + stepID);
+    //if steps.length > 1 { do normal }
+    //else { <ul id="multistep"></ul> }
+}
+function stepEdit(itemID, stepID) {
+	console.log("Editing step " + itemID +"_"+ stepID);
+}
+function stepSave(itemID, stepID) {
+	console.log("Saved step " + itemID + "_" + stepID);
+    todoSave();
+}
+function stepRemove(itemID, stepID) {
+	console.log("Removed step " + itemID + "_" + stepID);
+}
+
+
+function todoSave() {
+	if (todoData) {
+    	const saveString = JSON.stringify(todoData);
+        localStorage.todoData = saveString;
+        console.log(saveString);
+	}
+    else { return "Nothing to save"; }
+}
+function todoLoad() {
+	if (typeof(Storage) !== "undefined") {
+    	if (localStorage.todoData) {
+    		console.log("Todo Data exists! Attempting to load...");
+        	todoData = JSON.parse(localStorage.todoData);
+            console.log(todoData);
+// iterate through items and display them
+		//var populateData = [];
+    	//for (x in todoData.DATA) {
+    	//}
+        }
+        
+    }
+// if item.steps { iterate through steps and display them }
+}
+
+// History
 function historyUndo() {
 	console.log("Undo");
 	var unDid = historyLog.pop();
@@ -127,10 +310,12 @@ function historyRedo() {
 	historyDid();
 }
 function historyDid() {
+	//const historyDisplay = document.getElementById("historyDisplay");
     if (historyLog.length > 0) {
 		console.log(historyLog);
 		undoButton.disabled = false;
         undoButton.style.opacity = "1";
+        //historyDisplay.innerHTML = historyLog;
         //continue;
 	}
 	else {
@@ -152,57 +337,130 @@ function historyDid() {
         //continue;
     }
 }
-function historyUndid() {
 
-}
-function historyRedid() {
-
-}
-
-function boxTicked(id) {
-	//console.log("Item Completed");
-    var itemCompleted = document.getElementById("itemCompleted_" + id);
-    var lineItem = document.getElementById("listItem_" + id);
-    if (itemCompleted.value == "false") {
-    	lineItem.style.textDecoration = "line-through";
-        itemCompleted.value = "true";
-    }
+// Content
+function editingItemContent(id, label) {
+	if (label != undefined) {
+		var editItem = '<input type="text" id="itemText_'+id+'" value="'+label+'" /><input type="button" class="button" value="Save" onclick="itemSave('+id+')" /><input type="button" class="button" value="Remove" onclick="itemRemove('+id+')" /><br /><ul id="steps_'+id+'"></ul>';
+	}
     else {
-        lineItem.style.textDecoration = "none";
-        itemCompleted.value = "false";
+    	var editItem = '<input type="text" id="itemText_'+id+'" value="" /><input type="button" class="button" value="Save" onclick="itemSave('+id+')" /><input type="button" class="button" value="Remove" onclick="itemRemove('+id+')" /><br /><ul id="steps_'+id+'"></ul>';
     }
+    return editItem;
 }
+function savedItemContent(id, label) {
+	var saveItem = '<input type="checkbox" id="itemCheck_'+id+'" onclick="boxTicked('+id+')" name="item_'+id+'" /><label id="itemLabel_'+id+'" class="todo-item">'+label+'</label><input type="button" class="button" value="Edit" onclick="itemEdit('+id+')" /><br />';
+    return saveItem;
+}
+function editingStepContent(itemID, stepID) {
+	var editStep = '<li id="addedStep_'+itemID+'_'+stepID+'"><input type="text" id="item_'+itemID+'_step_'+stepID+'" /><input type="button" class="button" value="Save" id="saveButton" onclick="stepSave('+itemID+', '+stepID+')" /><input type="button" class="button" value="Remove" id="removeButton" onclick="stepRemove('+itemID+', '+stepID+')" /></li>';
+    return editStep;
+}
+function savedStepContent(itemID, stepID, label) {
+	var savedStep = '<input type="checkbox" id="step_'+itemID+'_'+stepID+'" onclick="boxTickedStep('+itemID+', '+stepID+')" checked="false" name="step_'+itemID+'_'+stepID+'" /><label for="step_'+itemID+'_'+stepID+'" id="labelStep_'+itemID+'_'+stepID+'" class="todo-step">'+label+'</label><input type="button" class="button" value="Edit" onclick="stepEdit('+itemID+', '+stepID+')" />';
+    return savedStep;
+}
+function todoUpdate() {
+// itemData = {"todoIndex": , "arrayPos": , "editing": false, "checked": false, "label": "", "steps": []}
+	const ulParent = document.getElementById("todobody");
+    // Variables
+    var dataDisplay = todoData.dataDisplay;
+    var DATA = todoData.DATA;
+    // clear current list
+    ulParent.innerHTML = "";
+    // display Item entries
+    if (dataDisplay.length > 0) {
+        for (id in dataDisplay) {
+	    	// gather data
+        	var dataIndex = dataDisplay[id];
+            var lineItem = DATA[dataIndex];
+            var todoIndex = lineItem.todoIndex;
+            var editing = lineItem.editing;
+            var checked = lineItem.checked;
+            var label = lineItem.label;
+            var steps = lineItem.steps;
+        	// display data
+            var newLineContent;
+			if (editing) { 
+            	newLineContent = editingItemContent(todoIndex, label); 
+            }
+            else { 
+            	// if steps
+                newLineContent = savedItemContent(todoIndex, label); 
+            }
+            var newLi = document.createElement("li");
+            newLi.id = todoIndex;
+            newLi.innerHTML = newLineContent;
+            if (steps.length > 0) { 
+            	// loop through steps
+                for (step in steps) {
+                	var stepLi = document.createElement("li")
+                }
+            }
+            ulParent.appendChild(newLi);
+        	// if items have steps, display steps
+        	var ulSteps = document.createElement("ul");
+        	//var 
+		}
+    }
 
-function itemAdd(id) {
-	console.log("Add");
-    var newLineContent = "";
-	var historyAction = new Array("Action, Effect");
-	historyLog.push(historyAction);
-	historyDid();
-}
-function stepAdd(itemID, stepID) {
-	console.log("Added step " + itemID + "_" + stepID);
-}
-function stepSave(itemID, stepID) {
-	console.log("Saved step " + itemID + "_" + stepID);
-}
-function stepRemove(itemID, stepID) {
-	console.log("Removed step " + itemID + "_" + stepID);
-}
-function itemEdit(id) {
-console.log("Editing item " + id);
-}
-function itemSave(id) {
-console.log("Saved item " + id);
-}
-function itemRemove(id) {
-console.log("Removed item " + id);
+	/*
+    console.log(id);
+    const ulParent = document.getElementById("todobody");
+    var newLineContent = editingItemContent(id);
+    var newLi = document.createElement("li");
+    newLi.id = "item_"+id; //id == todoIndex
+    newLi.innerHTML = newLineContent;
+    ulParent.appendChild(newLi);
+    // Add row
+    */
+
 }
 function storageDisplay() {
 	for (let i = 0; i < localStorage.length; i++) {
 		console.log(localStorage.key(i) + ": " + localStorage.getItem(localStorage.key(i)));
 	}
 }
+function storageClear() {
+	localStorage.clear()
+}
+function storagePresent() {
+console.log("storagePresent()");
+    var msg = [];
+    msg.push("Index: "+todoData.todoIndex);
+    msg.push("dataDisplay: "+todoData.dataDisplay.toString());
+    msg.push("DATA: "+todoData.DATA.toString());
+    
+    console.log("Storage presented");
+	postMessage(msg)
+    //var interval = 5000;
+    //var storageTimer = setInterval(storagePresent, interval);
+}
+function sTimer(cmd) {
+	console.log("sTimer: "+w);
+    var _cmd = cmd;
+    
+    switch(cmd) {
+    	case 'start':
+        	console.log("Start");
+    		if (typeof(w) == "undefined") {
+	    		w = new Worker(storagePresent);
+	    		w.onmessage = function(event) { 
+                	historyDisplay.innerHTML = event.data;
+                };
+			}
+	        break;
+		case 'stop':
+        	console.log("Stop");
+	    	clearInterval(storageTimer);
+	    	w.terminate();
+	    	w = undefined;
+	        break;
+		default: break;
+	}
+
+}
 </script>
 </body>
 </html>
+
