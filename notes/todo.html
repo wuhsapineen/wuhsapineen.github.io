@@ -1,7 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-<style>
+<html lang="en"><head>
+    <title>ToDo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://wuhsapineen.github.io/assets/css/style.css" />
+    <link rel="stylesheet" href="http://wuhsapineen.github.io/assets/css/main.css" />
+    <meta property="og:title" content="ToDo" />
+    <meta name="author" content="wuhsapineen" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="GitHub Pages" />
+    <meta property="og:description" content="GitHub Pages" />
+    <link rel="canonical" href="https://wuhsapineen.github.io/notes/" />
+    <meta property="og:url" content="https://wuhsapineen.github.io/notes/" />
+    <meta property="og:site_name" content="wuhsapineen.github.io" />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"wuhsapineen"},"description":"GitHub Pages","headline":"ToDo","url":"https://wuhsapineen.github.io/notes/"}</script>
+    <link type="application/atom+xml" rel="alternate" href="https://wuhsapineen.github.io/feed.xml" title="wuhsapineen.github.io" />
+    <style type="text/css">
+
+* { font-family: Lucida Sans, Verdana, Trebuchet MS; }
 table.todo {
   margin: 18px 9px;
 }
@@ -37,430 +56,536 @@ li a:hover {
 }
 .todo li {
   font-size: 12pt;
-  padding: 0px 6px;
+  padding: 3px 12px;
+}
+
+li .todo-item, li .todo-step { 
+ position: relative;
+ top: -.0rem;
+ margin: 0 0 0 2rem;
+ color: #262626;
 }
 .todo li .todo-item {
   padding: 0px 12px;
 }
 .todo li label { padding: 0px 12px 0px 0px; }
+
 .button {
-  background-color: #262626;
-  border: 1px solid #B4D7FF;
-  border-radius: 6px;
-  color: #F5F5F5;
-  padding: 4px 10px;
-  text-align: center;
-  text-decoration: none;
-  float: none;
-  display: inline-block;
-  font-size: 9pt;
-  margin: 6px 3px;
+ border: none;
+ color: #FFFFFF;
+ background-image: linear-gradient(30deg, #03090F, #B4D7FF);
+ border-radius: 6px;
+ background-size: 100% auto;
+ font-family: inherit;
+ font-size: 12pt;
+ padding: .3rem .6rem;
+ margin: 1px 0 0 .8rem;
+}
+
+.button:hover {
+ color: #FFD700;
+ background-position: left center;
+ background-size: 200% auto;
+ -webkit-animation: pulse 2s infinite;
+ animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+ 0% {
+  box-shadow: 0 0 0 0 #FFD700FF;
+ }
+
+ 70% {
+  box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+ }
+
+ 100% {
+  box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+ }
+}
+#todobody input[type="text"] {
+ line-height: 21pt;
+ border: 2px solid transparent;
+ border-bottom-color: #707070;
+ padding: .2rem .5rem;
+ outline: none;
+ background-color: transparent;
+ color: #0d0c22;
+ transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#todobody input[type="text"]:focus, #todobody input[type="text"]:hover {
+ outline: none;
+ padding: .2rem .5rem;
+ border-radius: .3rem;
+ border-color: #5187B4;
+}
+
+#todobody input[type="text"]::placeholder {
+ color: #707070;
+}
+
+#todobody input[type="text"]:focus::placeholder {
+ opacity: 0;
+ transition: opacity .3s;
+}
+.checktainer {
+ display: block;
+ position: relative;
+ top: 13px;
+ padding-left: 35px;
+ margin-bottom: 12px;
+ cursor: pointer;
+ font-size: 22px;
+ user-select: none;
+ vertical-alight: middle;
+}
+.checktainer input {
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
-  transition-duration: 0.3s;
+  height: 0;
+  width: 0;
 }
-.button:hover, .button:hover {
-  background-color: #03090F;
-  color: #FFD700;
-  border: 1px solid #FFD700;
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background-color: #969696;
+  border: 1px solid #565656;
+  border-radius: 3px;
+}
+.checktainer input:checked ~ .checkmark {
+  background-color: #5187B4;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checktainer input:checked ~ .checkmark:after {
+  display: block;
+}
+.checktainer .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+textarea { 
+	resize: none; 
+    white-space: pre;
+    word-wrap: normal;
+    overflow: scroll;
 }
 
-textarea { resize: none; }
-</style>
+    </style>
 </head>
-<body onload="historyDid()">
-<br />
-<table class="todo" width="60%">
-<thead><tr>
-<th>T O D O</th>
-</tr></thead>
-<tbody>
-<tr><td>
-<form><ul class="todo" id="todobody">No items added.
-</ul>
-</form>
-</td></tr>
-<tr><td class="todo">
-<input type="button" class="button" value="Add" id="addButton" onclick="itemAdd()" /><input type="button" class="button" value="Undo" id="undoButton" onclick="historyUndo()" disabled="true" /><input type="button" class="button" value="Redo" id="redoButton" onclick="historyRedo()" disabled="true" />
-</td></tr>
-</tbody>
-</table>
-<div class="todo"><input type="button" class="button" onclick="todoSave()" value="Save All" /><input type="button" class="button" onclick="todoLoad()" value="Load" /></div>
-<span id="test"></span>
-<br />
-<table><tr>
-<td><textarea id="historyDisplay" rows="30" cols="90" readonly="true" wrap="soft"></textarea><br /></td>
-<td><div id="todoInformation"></div></td>
-<br />
-<input type="color" id="colorPicker" /> &nbsp; <span id="testDisplay"></span><br />
-<br />
-<div id="color-scheme"><ul>
-<li id="background"><b>Dark Blue Custom:</b> RGB(3, 9, 15), HEX(#03090F);</li>
-<li id="text"><b>Light Blue Custom:</b> RGB(180, 215, 255), HEX(#B4D7FF);</li>
-<li id="highlight"><b>White Smoke:</b> RGB(245, 245, 245), HEX(#F5F5F5);</li>
-<li id="medgray"><b>Medium Gray:</b> RGB(150, 150, 150), HEX(#969696);</li>
-<li id="shadow"><b>Dark Gray:</b> RGB(38, 38, 38), HEX(#262626);</li>
-<li id="accent"><b>Gold:</b> RGB(255, 215, 0), HEX(#FFD700);</li>
-<li id="accent2"><b>Yellow-Orange:</b> RGB(255, 174, 66), HEX(#FFAE42);</li>
-</ul></div>
-<b>Storage: </b> <input type="button" class="button" value="Display" onclick="storageDisplay()" /> <input type="button" class="button" value="Clear" onclick="storageClear()" /><div id="displayStorage"></div><br />
-<b>Timer: </b> <input type="button" class="button" value="Start" onclick="sTimer('start')" /> <input type="button" class="button" value="Stop" onclick="sTimer('stop')" /><br />
+<body onload="historyDid(), todoUpdate()"><header class="site-header" role="banner">
 
-<script type="text/javascript">
-// test
-const test = document.getElementById("testDisplay");
-function testUpdate(input) {
-	var testText = input;
-    test.innerHTML = testText;
-}
-const infos = document.getElementById("todoInformation");
-var displayedInformation = "";
-function updateInformation() {
-	infos.innerHTML = displayedInformation;
-    setTimeout(updateInformation, 3000);
-}
+    <div class="wrapper"><a class="site-title" rel="author" href="/">wuhsapineen.github.io</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+  
+          <div class="trigger"><a class="page-link" href="/sandbox/">Sandbox</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/">Home</a></div>
+        </nav></div>
+  </header><main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <article class="post">
+                <header class="post-header">
+                    <h1 class="post-title">Notes</h1>
+                </header>
+                <div class="post-content">
+                <br />
 
-// Data info reporting:
-//const todoInformation = document.getElementById("todoInformation");
-var infoReport = [];
-if(typeof(Worker) !== "undefined") {
-	
-}
-
-// -- History Setup:
-// Actions:
-// Add Item: itemAdd()
-// Edit: itemEdit(id)
-// Save Item: itemSave(id)
-// Remove Item: itemRemove(id)
-// Checkbox Item: boxTickedItem(id)
-// Checkbox Step: boxTickedStep(id)
-// Add Step: stepAdd(itemID, stepID)
-// Edit Step: stepEdit(itemID, stepID)
-// Save Step: stepSave(itemID, stepID)
-// Remove Step: stepRemove(itemID, stepID)
-// Undo: historyUndo()
-// Redo: historyRedo()
-
-// data to be displayed
-// todoData = []
-// itemData = {"todoIndex": , "arrayPos": , "editing": false, "checked": false, "label": "", "steps": []}
-// formatting
-// endtest
-var todoData = {"todoIndex":0,"dataDisplay":[],"DATA":[]};
-var w = undefined;
-var historyLog = [];
-var undoLog = [];
-const historyDisplay = document.getElementById("historyDisplay");
-const addButton = document.getElementById("addButton");
-const undoButton = document.getElementById("undoButton");
-const redoButton = document.getElementById("redoButton");
-
-
-// Controls
-function itemAdd() {
-	// Gather information: todoIndex, dataDisplay, arrayPos, ...
-    var todoIndex = todoData.todoIndex; //int
-    var dataDisplay = todoData.dataDisplay; //array
-    var dataDisplayPosition = todoData.DATA.length; //int
-    // create data string from information
-    // {"todoIndex": id, "editing": true, "checked": false, "label": "", "steps": []}
-    var newDataLine = {"todoIndex": todoIndex, "arrayPos": dataDisplayPosition, "editing": true, "checked": false, "label": "", "steps": []};
-    // add record to todoData.DATA
-    todoData.DATA.push(newDataLine);
-	// add todoIndex to dataDisplay array
-	dataDisplay.push(dataDisplayPosition);
-    // increment todoData.todoIndex
-    todoData.todoIndex++;
-    // call update function
-    todoUpdate();
-    // check results
-    console.log(todoData.DATA[todoIndex]);
-}
-function itemEdit(id) {
-	var item = todoData.DATA[id];
-    var label = document.getElementById("itemLabel_"+id).innerHTML;
-	item.editing = true;
-    todoUpdate();
-    console.log(item);
-}
-function itemSave(id) {
-	var item = todoData.DATA[id];
-    var label = document.getElementById("itemText_"+id).value;
-    // change editing to false
-    item.editing = false;
-    // save label
-    item.label = label;
-    // call update function
-    todoUpdate();
-    // check results
-    console.log(item);
-    /*
-    var label = document.getElementById("itemText_"+id).value;
-    var modifyLi = document.getElementById("item_"+id);
-	console.log("Saved item_" + id);
-    
-	//var savedLineContent = savedItemContent(id, label);
-    console.log(savedLineContent);
-	//todoSave();
-    */
-}
-function itemRemove(id) {
-	// delete record from dataDisplay NOT FROM DATA
-    var dataDisplay = todoData.dataDisplay;
-    var listItem = todoData.DATA[id];
-    var arrayPos = listItem.arrayPos;
-    // iterate through dataDisplay to find id
-    console.log(dataDisplay);
-    for (item in dataDisplay) {
-    	if (dataDisplay[item] == id) {
-        	dataDisplay.splice(item, 1);
-            console.log("Item removed: "+item);
-            todoUpdate();
-            break;
-        }
-        else { 
-        	console.log("Item "+item+" not removed"); 
-            continue;
-		}
-    }
-    /*
-    todoData.dataDisplay.splice(arrayPos, 1);
-    console.log(item);
-    todoUpdate();
-    */
-}
-
-function boxTickedItem(id) {
-	console.log("Item Completed "+id);
-    const check = todoData.DATA[id];
-    if (check.checked == false) {
-    	check.checked = true;
-    	console.log(check);
-	} else {
-    	check.checked = false;
-        console.log(check);
-    }
-    
-    
-    //lineItem.style.textDecoration = "line-through";
-    //updateTodoList();
-}
-function boxTickedStep(itemID, stepID) {
-	console.log("Item Completed "+itemID+"_"+stepID);
-    const check = todoData.DATA[itemID]
-    console.log(check.steps[stepID].label);
-    //check.checked = true;
-    //console.log(check);
-}
-
-function stepAdd(itemID, stepID) {
-	console.log("Added step " + itemID + "_" + stepID);
-    //if steps.length > 1 { do normal }
-    //else { <ul id="multistep"></ul> }
-}
-function stepEdit(itemID, stepID) {
-	console.log("Editing step " + itemID +"_"+ stepID);
-}
-function stepSave(itemID, stepID) {
-	console.log("Saved step " + itemID + "_" + stepID);
-    todoSave();
-}
-function stepRemove(itemID, stepID) {
-	console.log("Removed step " + itemID + "_" + stepID);
-}
-
-
-function todoSave() {
-	if (todoData) {
-    	const saveString = JSON.stringify(todoData);
-        localStorage.todoData = saveString;
-        console.log(saveString);
-	}
-    else { return "Nothing to save"; }
-}
-function todoLoad() {
-	if (typeof(Storage) !== "undefined") {
-    	if (localStorage.todoData) {
-    		console.log("Todo Data exists! Attempting to load...");
-        	todoData = JSON.parse(localStorage.todoData);
-            console.log(todoData);
-// iterate through items and display them
-		//var populateData = [];
-    	//for (x in todoData.DATA) {
-    	//}
-        }
-        
-    }
-// if item.steps { iterate through steps and display them }
-}
-
-// History
-function historyUndo() {
-	console.log("Undo");
-	var unDid = historyLog.pop();
-    console.log("Undid: "+unDid);
-    undoLog.push(unDid);
-	historyDid();
-}
-function historyRedo() {
-	console.log("Redo");
-    var reDid = undoLog.pop();
-    console.log("Redid: "+reDid);
-    historyLog.push(reDid);
-	historyDid();
-}
-function historyDid() {
-	//const historyDisplay = document.getElementById("historyDisplay");
-    if (historyLog.length > 0) {
-		console.log(historyLog);
-		undoButton.disabled = false;
-        undoButton.style.opacity = "1";
-        //historyDisplay.innerHTML = historyLog;
-        //continue;
-	}
-	else {
-        console.log(historyLog);
-        undoButton.disabled = true;
-        undoButton.style.opacity = "0.5";
-		//continue;
-	}
-    if (undoLog.length > 0) {
-    	console.log(undoLog);
-        redoButton.disabled = false;
-        redoButton.style.opacity = "1";
-        //continue;
-    }
-    else {
-    	console.log(undoLog);
-        redoButton.disabled = true;
-        redoButton.style.opacity = "0.5";
-        //continue;
-    }
-}
-
-// Content
-function editingItemContent(id, label) {
-	if (label != undefined) {
-		var editItem = '<input type="text" id="itemText_'+id+'" value="'+label+'" /><input type="button" class="button" value="Save" onclick="itemSave('+id+')" /><input type="button" class="button" value="Remove" onclick="itemRemove('+id+')" /><br /><ul id="steps_'+id+'"></ul>';
-	}
-    else {
-    	var editItem = '<input type="text" id="itemText_'+id+'" value="" /><input type="button" class="button" value="Save" onclick="itemSave('+id+')" /><input type="button" class="button" value="Remove" onclick="itemRemove('+id+')" /><br /><ul id="steps_'+id+'"></ul>';
-    }
-    return editItem;
-}
-function savedItemContent(id, label) {
-	var saveItem = '<input type="checkbox" id="itemCheck_'+id+'" onclick="boxTicked('+id+')" name="item_'+id+'" /><label id="itemLabel_'+id+'" class="todo-item">'+label+'</label><input type="button" class="button" value="Edit" onclick="itemEdit('+id+')" /><br />';
-    return saveItem;
-}
-function editingStepContent(itemID, stepID) {
-	var editStep = '<li id="addedStep_'+itemID+'_'+stepID+'"><input type="text" id="item_'+itemID+'_step_'+stepID+'" /><input type="button" class="button" value="Save" id="saveButton" onclick="stepSave('+itemID+', '+stepID+')" /><input type="button" class="button" value="Remove" id="removeButton" onclick="stepRemove('+itemID+', '+stepID+')" /></li>';
-    return editStep;
-}
-function savedStepContent(itemID, stepID, label) {
-	var savedStep = '<input type="checkbox" id="step_'+itemID+'_'+stepID+'" onclick="boxTickedStep('+itemID+', '+stepID+')" checked="false" name="step_'+itemID+'_'+stepID+'" /><label for="step_'+itemID+'_'+stepID+'" id="labelStep_'+itemID+'_'+stepID+'" class="todo-step">'+label+'</label><input type="button" class="button" value="Edit" onclick="stepEdit('+itemID+', '+stepID+')" />';
-    return savedStep;
-}
-function todoUpdate() {
-// itemData = {"todoIndex": , "arrayPos": , "editing": false, "checked": false, "label": "", "steps": []}
-	const ulParent = document.getElementById("todobody");
-    // Variables
-    var dataDisplay = todoData.dataDisplay;
-    var DATA = todoData.DATA;
-    // clear current list
-    ulParent.innerHTML = "";
-    // display Item entries
-    if (dataDisplay.length > 0) {
-        for (id in dataDisplay) {
-	    	// gather data
-        	var dataIndex = dataDisplay[id];
-            var lineItem = DATA[dataIndex];
-            var todoIndex = lineItem.todoIndex;
-            var editing = lineItem.editing;
-            var checked = lineItem.checked;
-            var label = lineItem.label;
-            var steps = lineItem.steps;
-        	// display data
-            var newLineContent;
-			if (editing) { 
-            	newLineContent = editingItemContent(todoIndex, label); 
-            }
-            else { 
-            	// if steps
-                newLineContent = savedItemContent(todoIndex, label); 
-            }
-            var newLi = document.createElement("li");
-            newLi.id = todoIndex;
-            newLi.innerHTML = newLineContent;
-            if (steps.length > 0) { 
-            	// loop through steps
-                for (step in steps) {
-                	var stepLi = document.createElement("li")
+                <br />
+                <table class="todo" width="60%">
+                    <thead>
+                        <tr>
+                            <th>T O D O</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                            
+                <form>
+                <ul class="todo" id="todobody">
+                No items added.
+                </ul>
+                </form>
+                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="todo">
+                            
+                <input type="button" class="button" value="Add" id="addButton" onclick="itemAdd()" /><input type="button" class="button" value="Undo" id="undoButton" onclick="historyUndo()" disabled="true" /><input type="button" class="button" value="Redo" id="redoButton" onclick="historyRedo()" disabled="true" /><input type="button" class="button" onclick="todoSave()" value="Save All" /><input type="button" class="button" onclick="todoLoad()" value="Load" />
+                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <textarea id="historyDisplay" rows="30" cols="90" readonly="true" wrap="none"></textarea><br />
+                <div id="todoInformation"></div><br />
+                <br />
+                <input type="color" id="colorPicker" /> &nbsp; <span id="testDisplay"></span><br />
+                <b>Storage: </b> <input type="button" class="button" value="Display" onclick="storageDisplay()" /> <input type="button" class="button" value="Clear" onclick="storageClear()" /><div id="displayStorage"></div><br />
+                <br />
+                <div id="color-scheme"><ul>
+                <li id="background"><b>Dark Blue Custom:</b> RGB(3, 9, 15), HEX(#03090F);</li>
+                <li id="medblue"><b>Medium Blue Custom:</b> RGB(81, 135, 180), HEX(#5187B4);</li>
+                <li id="text"><b>Light Blue Custom:</b> RGB(180, 215, 255), HEX(#B4D7FF);</li>
+                <li id="highlight"><b>White Smoke:</b> RGB(245, 245, 245), HEX(#F5F5F5);</li>
+                <li id="medgray"><b>Medium Gray:</b> RGB(150, 150, 150), HEX(#969696);</li>
+                <li id="shadow"><b>Dark Gray:</b> RGB(38, 38, 38), HEX(#262626);</li>
+                <li id="accent"><b>Gold:</b> RGB(255, 215, 0), HEX(#FFD700);</li>
+                <li id="accent2"><b>Yellow-Orange:</b> RGB(255, 174, 66), HEX(#FFAE42);</li>
+                </ul></div>
+                <script type="text/javascript">
+                // test
+                const test = document.getElementById("testDisplay");
+                function testUpdate(input) {
+                    var testText = input;
+                    test.innerHTML = testText;
                 }
-            }
-            ulParent.appendChild(newLi);
-        	// if items have steps, display steps
-        	var ulSteps = document.createElement("ul");
-        	//var 
-		}
-    }
+                const infos = document.getElementById("todoInformation");
+                var displayedInformation = "";
+                function updateInformation() {
+                    infos.innerHTML = displayedInformation;
+                    setTimeout(updateInformation, 3000);
+                }
+                
+                // Data info reporting:
+                //const todoInformation = document.getElementById("todoInformation");
+                var infoReport = [];
+                if(typeof(Worker) !== "undefined") {
+                    
+                }
+                
+                // -- History Setup:
+                // Actions:
+                // Add Item: itemAdd()
+                // Edit: itemEdit(id)
+                // Save Item: itemSave(id)
+                // Remove Item: itemRemove(id)
+                // Checkbox Item: boxTickedItem(id)
+                // Checkbox Step: boxTickedStep(id)
+                // Add Step: stepAdd(itemID, stepID)
+                // Edit Step: stepEdit(itemID, stepID)
+                // Save Step: stepSave(itemID, stepID)
+                // Remove Step: stepRemove(itemID, stepID)
+                // Undo: historyUndo()
+                // Redo: historyRedo()
+                
+                // data to be displayed
+                // todoData = []
+                // itemData = {"todoIndex": , "arrayPos": , "editing": false, "checked": false, "label": "", "steps": []}
+                // formatting
+                // endtest
+                var todoData = {"todoIndex":0,"dataDisplay":[],"DATA":[]};
+                var w = undefined;
+                var historyLog = [];
+                var undoLog = [];
+                const historyDisplay = document.getElementById("historyDisplay");
+                const addButton = document.getElementById("addButton");
+                const undoButton = document.getElementById("undoButton");
+                const redoButton = document.getElementById("redoButton");
+                
+                
+                // Controls
+                function itemAdd() {
+                    // Gather information: todoIndex, dataDisplay, arrayPos, ...
+                    var todoIndex = todoData.todoIndex; //int
+                    var dataDisplay = todoData.dataDisplay; //array
+                    var dataDisplayPosition = todoData.DATA.length; //int
+                    // create data string from information
+                    // {"todoIndex": id, "editing": true, "checked": false, "label": "", "steps": []}
+                    var newDataLine = {"todoIndex": todoIndex, "arrayPos": dataDisplayPosition, "editing": true, "checked": false, "label": "", "steps": []};
+                    // add record to todoData.DATA
+                    todoData.DATA.push(newDataLine);
+                    // add todoIndex to dataDisplay array
+                    dataDisplay.push(dataDisplayPosition);
+                    // increment todoData.todoIndex
+                    todoData.todoIndex++;
+                    // call update function
+                    todoUpdate();
+                }
+                function itemEdit(id) {
+                    var item = todoData.DATA[id];
+                    var label = document.getElementById("itemLabel_"+id).innerHTML;
+                    item.editing = true;
+                    todoUpdate();
+                }
+                function itemSave(id) {
+                    var item = todoData.DATA[id];
+                    var label = document.getElementById("itemText_"+id).value;
+                    // change editing to false
+                    item.editing = false;
+                    // save label
+                    item.label = label;
+                    // call update function
+                    todoUpdate();
+                    /*
+                    var label = document.getElementById("itemText_"+id).value;
+                    var modifyLi = document.getElementById("item_"+id);
+                    console.log("Saved item_" + id);
+                    
+                    //var savedLineContent = savedItemContent(id, label);
+                    console.log(savedLineContent);
+                    //todoSave();
+                    */
+                }
+                function itemRemove(id) {
+                    // delete record from dataDisplay NOT FROM DATA
+                    var dataDisplay = todoData.dataDisplay;
+                    var listItem = todoData.DATA[id];
+                    var arrayPos = listItem.arrayPos;
+                    // iterate through dataDisplay to find id
+                    for (item in dataDisplay) {
+                        if (dataDisplay[item] == id) {
+                            dataDisplay.splice(item, 1);
+                            todoUpdate();
+                            break;
+                        }
+                        else { 
+                            continue;
+                        }
+                    }
+                    /*
+                    todoData.dataDisplay.splice(arrayPos, 1);
+                    console.log(item);
+                    todoUpdate();
+                    */
+                }
+                
+                function boxTickedItem(id) {
+                    console.log("Item Completed "+id);
+                    const check = todoData.DATA[id];
+                    if (check.checked == false) {
+                        check.checked = true;
+                        console.log(check);
+                    } else {
+                        check.checked = false;
+                        console.log(check);
+                    }
+                    
+                    
+                    //lineItem.style.textDecoration = "line-through";
+                    //updateTodoList();
+                }
+                function boxTickedStep(itemID, stepID) {
+                    console.log("Item Completed "+itemID+"_"+stepID);
+                    const check = todoData.DATA[itemID]
+                    console.log(check.steps[stepID].label);
+                    //check.checked = true;
+                    //console.log(check);
+                }
+                
+                function stepAdd(itemID, stepID) {
+                    console.log("Added step " + itemID + "_" + stepID);
+                    //if steps.length > 1 { do normal }
+                    //else { <ul id="multistep"></ul> }
+                }
+                function stepEdit(itemID, stepID) {
+                    console.log("Editing step " + itemID +"_"+ stepID);
+                }
+                function stepSave(itemID, stepID) {
+                    console.log("Saved step " + itemID + "_" + stepID);
+                    todoSave();
+                }
+                function stepRemove(itemID, stepID) {
+                    console.log("Removed step " + itemID + "_" + stepID);
+                }
+                
+                // TODO: compare local data to saved data, enable save button if different, disable if same
+                // TODO: check if saved data, enable load button if so, disable if not
+                function todoSave() {
+                    if (todoData) {
+                        const saveString = JSON.stringify(todoData);
+                        localStorage.todoData = saveString;
+                    }
+                    else { return "Nothing to save"; }
+                }
+                function todoLoad() {
+                    if (typeof(Storage) !== "undefined") {
+                        if (localStorage.todoData) { todoData = JSON.parse(localStorage.todoData); }
+                    }
+                }
+                
+                // History
+                function historyUndo() {
+                    var unDid = historyLog.pop();
+                    undoLog.push(unDid);
+                    historyDid();
+                }
+                function historyRedo() {
+                    var reDid = undoLog.pop();
+                    historyLog.push(reDid);
+                    historyDid();
+                }
+                function historyDid() {
+                    //const historyDisplay = document.getElementById("historyDisplay");
+                    if (historyLog.length > 0) {
+                        undoButton.disabled = false;
+                        undoButton.style.opacity = "1";
+                        //historyDisplay.innerHTML = historyLog;
+                        //continue;
+                    }
+                    else {
+                        undoButton.disabled = true;
+                        undoButton.style.opacity = "0.5";
+                        //continue;
+                    }
+                    if (undoLog.length > 0) {
+                        redoButton.disabled = false;
+                        redoButton.style.opacity = "1";
+                        //continue;
+                    }
+                    else {
+                        redoButton.disabled = true;
+                        redoButton.style.opacity = "0.5";
+                        //continue;
+                    }
+                }
+                
+                // Content
+                function editingItemContent(id, label) {
+                    if (label != undefined) {
+                        var editItem = '<input type="text" id="itemText_'+id+'" value="'+label+'" required="" /><input type="button" class="button" value="Save" onclick="itemSave('+id+')" /><input type="button" class="button" value="Remove" onclick="itemRemove('+id+')" /><br /><ul id="steps_'+id+'"><li></ul>';
+                    }
+                    else {
+                        var editItem = '<input type="text" id="itemText_'+id+'" value="" required="" /><input type="button" class="button" value="Save" onclick="itemSave('+id+')" /><input type="button" class="button" value="Remove" onclick="itemRemove('+id+')" /><br /><ul id="steps_'+id+'"></ul>';
+                    }
+                    return editItem;
+                }
+                function savedItemContent(id, label) {
+                    var saveItem = '<label class="checktainer"><input type="checkbox" class="checkbox" id="itemCheck_'+id+'" onclick="boxTicked('+id+')" name="item_'+id+'" /><span class="checkmark"></span></label> <span id="itemLabel_'+id+'" class="todo-item">'+label+'</span><input type="button" class="button" value="Edit" onclick="itemEdit('+id+')" /><br />';
+                    return saveItem;
+                }
+                function editingStepContent(itemID, stepID) {
+                    var editStep = '<li id="addedStep_'+itemID+'_'+stepID+'"><input type="text" id="item_'+itemID+'_step_'+stepID+'" /><input type="button" class="button" value="Save" id="saveButton" onclick="stepSave('+itemID+', '+stepID+')" /><input type="button" class="button" value="Remove" id="removeButton" onclick="stepRemove('+itemID+', '+stepID+')" /></li>';
+                    return editStep;
+                }
+                function savedStepContent(itemID, stepID, label) {
+                    var savedStep = '<label class="checktainer"><input type="checkbox" class="checkbox" id="step_'+itemID+'_'+stepID+'" onclick="boxTickedStep('+itemID+', '+stepID+')" checked="false" name="step_'+itemID+'_'+stepID+'" /><span class="checkmark"></span></label> <span id="labelStep_'+itemID+'_'+stepID+'" class="todo-step">'+label+'</span><input type="button" class="button" value="Edit" onclick="stepEdit('+itemID+', '+stepID+')" />';
+                    return savedStep;
+                }
+                function todoUpdate() {
+                // itemData = {"todoIndex": , "arrayPos": , "editing": false, "checked": false, "label": "", "steps": []}
+                    const ulParent = document.getElementById("todobody");
+                    // Variables
+                    var dataDisplay = todoData.dataDisplay;
+                    var DATA = todoData.DATA;
+                    // clear current list
+                    ulParent.innerHTML = "";
+                    // display Item entries
+                    if (dataDisplay.length > 0) {
+                        for (id in dataDisplay) {
+                            // gather data
+                            var dataIndex = dataDisplay[id];
+                            var lineItem = DATA[dataIndex];
+                            var todoIndex = lineItem.todoIndex;
+                            var editing = lineItem.editing;
+                            var checked = lineItem.checked;
+                            var label = lineItem.label;
+                            var steps = lineItem.steps;
+                            // display data
+                            var newLineContent;
+                            if (editing) { 
+                                newLineContent = editingItemContent(todoIndex, label); 
+                            }
+                            else { 
+                                // if steps
+                                newLineContent = savedItemContent(todoIndex, label); 
+                            }
+                            var newLi = document.createElement("li");
+                            newLi.id = todoIndex;
+                            newLi.innerHTML = newLineContent;
+                            if (steps.length > 0) { 
+                                // loop through steps
+                                for (step in steps) {
+                                    var stepLi = document.createElement("li")
+                                }
+                            }
+                            ulParent.appendChild(newLi);
+                            // if items have steps, display steps
+                            var ulSteps = document.createElement("ul");
+                            //var 
+                        }
+                    }
+                
+                    /*
+                    console.log(id);
+                    const ulParent = document.getElementById("todobody");
+                    var newLineContent = editingItemContent(id);
+                    var newLi = document.createElement("li");
+                    newLi.id = "item_"+id; //id == todoIndex
+                    newLi.innerHTML = newLineContent;
+                    ulParent.appendChild(newLi);
+                    // Add row
+                    */
+                    storagePresent();
+                }
+                function storageDisplay() {
+                    for (let i = 0; i < localStorage.length; i++) {
+                        console.log(localStorage.key(i) + ": " + localStorage.getItem(localStorage.key(i)));
+                    }
+                }
+                function storageClear() {
+                    localStorage.clear()
+                }
+                function storagePresent() {
+                    var DATA = todoData.DATA;
+                    var msg = [];
+                    msg.push("Index: "+todoData.todoIndex);
+                    msg.push("dataDisplay: "+todoData.dataDisplay.toString());
+                    msg.push("DATA:");
+                    msg.push(DATA);
+                    
+                    historyDisplay.innerHTML = "";
+                    for (x in msg) {
+                        if (x != 3) { historyDisplay.innerHTML += msg[x] + "\n"; }
+                        else { 
+                            for (y in msg[x]) { 
+                                var newmsg = JSON.stringify(msg[x][y]);
+                                historyDisplay.innerHTML += newmsg + "\n"; }
+                        }
+                    }
+                    //var interval = 5000;
+                    //var storageTimer = setInterval(storagePresent, interval);
+                }
+                </script>
 
-	/*
-    console.log(id);
-    const ulParent = document.getElementById("todobody");
-    var newLineContent = editingItemContent(id);
-    var newLi = document.createElement("li");
-    newLi.id = "item_"+id; //id == todoIndex
-    newLi.innerHTML = newLineContent;
-    ulParent.appendChild(newLi);
-    // Add row
-    */
+                </div>
+            </article>
+        </div>
+    </main><footer class="site-footer h-card">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      
+      <div class="footer-col footer-col-1">
+        <ul class="footer-nav"><li><a href="https://wuhsapineen.github.io/sitemap/">Sitemap</a></li></ul>
+      </div>
+      <div class="footer-col footer-col-2">        
 
-}
-function storageDisplay() {
-	for (let i = 0; i < localStorage.length; i++) {
-		console.log(localStorage.key(i) + ": " + localStorage.getItem(localStorage.key(i)));
-	}
-}
-function storageClear() {
-	localStorage.clear()
-}
-function storagePresent() {
-console.log("storagePresent()");
-    var msg = [];
-    msg.push("Index: "+todoData.todoIndex);
-    msg.push("dataDisplay: "+todoData.dataDisplay.toString());
-    msg.push("DATA: "+todoData.DATA.toString());
-    
-    console.log("Storage presented");
-	postMessage(msg)
-    //var interval = 5000;
-    //var storageTimer = setInterval(storagePresent, interval);
-}
-function sTimer(cmd) {
-	console.log("sTimer: "+w);
-    var _cmd = cmd;
-    
-    switch(cmd) {
-    	case 'start':
-        	console.log("Start");
-    		if (typeof(w) == "undefined") {
-	    		w = new Worker(storagePresent);
-	    		w.onmessage = function(event) { 
-                	historyDisplay.innerHTML = event.data;
-                };
-			}
-	        break;
-		case 'stop':
-        	console.log("Stop");
-	    	clearInterval(storageTimer);
-	    	w.terminate();
-	    	w = undefined;
-	        break;
-		default: break;
-	}
-
-}
-</script>
-</body>
+      </div>
+      <div class="footer-col footer-col-3">Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">Creative Commons Zero v1.0 Universal</a></div>
+    </div>
+  </div>
+</footer></body>
 </html>
+
 
