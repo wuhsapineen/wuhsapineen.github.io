@@ -45,6 +45,8 @@ Large cargo ships pick up at mining hubs and deliver to production facility (req
     -   Gold
     -   Silver
     -   Cobalt
+-   CommsRelay Station
+    -   Laser Antennae connected to orbital stations at each planet
 -   Grid Networking
     -   Build Remote Control blocks on all grids and name them appropriately (Remote Control - \<Grid Name\>)
 -   Salvage space station (SalvageStation01)
@@ -258,13 +260,16 @@ InvListX * all
 ---
 # <span id="SE-station-registry">Station Registry</span>
 
-- Station name/number (As indicated on the remote control block)
+- Station name/number (as indicated on the remote control block)
 - Station Type (See [naming convention][3-05])
 - Location (GPS on the remote control block)
 
-| Station Name | Station Type | GPS Location |
-| --- | --- | --- |
-| SpaceStation01 | 
+| Station Name | Station Type | Description | GPS Location |
+| --- | --- | --- | --- |
+| G-PR-001 | General Station | Earth-like station 1 (home base) |  |
+| G-PRF-002 | General Station | First space station | GPS:RC-G-PRF-002:-84388.82:-29964.82:73000.11:#FF969696: |
+| SY-001 | Shipyard | Salvage station, adjacent to G-PR-002 | GPS:RC-SY-001:-85119.37:-29825.71:72397.73:#FF969696: |
+| G-PR-003 | General Station | Primary production with shipyard and fleet dock | GPS:G-PR-003:-76050.51:19721.82:79723.92:#FF75C9F1: |
 
 
 .
@@ -284,6 +289,7 @@ InvListX * all
 | AT-003 | AKL-001 | M80 Tug |
 | AT-004 | AKL-001 | M80 Tug |
 | LCU-001 | Earth-like Orbit | M80 Heavy Lander |
+| OS-001 | CVU-002 | N/A |
 | **Cargo Ships** |
 | AKL-001 | Earth-like Orbit | M80 Super Heavy Freighter |
 | AKM-001 | Earth-like Orbit | M80 Heavy Freighter |
@@ -308,6 +314,7 @@ InvListX * all
 | MSH-014 | CVU-002 | M80 Hydro Mining Ship |
 | MSH-015 | CVU-002 | M80 Hydro Mining Ship |
 | MSH-016 | CVU-002 | M80 Hydro Mining Ship |
+| MSH-017 | Ice Mine | M80 Hydro Mining Ship |
 | MSI-001 | AKL-001 | M80 Ion Mining Ship |
 | MSI-002 | AKL-001 | M80 Ion Mining Ship |
 | **Mining Drones** *(no cockpit)* |
@@ -317,9 +324,10 @@ InvListX * all
 ## <span id="SE-naming-convention">Naming Convention</span>
 **Stations**
 -   PD: Production Depot
--   RC: Refueling Center
+-   FC: Fueling Center
 -   RP: Respawn Point
 -   SY: Shipyard
+-   G-(P, R, F, S): General Station (P: Production, R: Respawn, F: Fuel, S: Shipyard)
 
 **Ships**
 -   ARS: Rescue and Salvage Ship
@@ -331,6 +339,7 @@ InvListX * all
 -   ATF: Fleet Tug
 -   ATR: Rescue Tug
 -   ATY: Yard Tug
+-   OS: Ore Scout
 -   CVU: Carrier Utility
 -   LCU: Landing Craft Utility
 -   MSH: Mining Ship, Hydrogen
