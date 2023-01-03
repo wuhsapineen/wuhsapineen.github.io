@@ -39,29 +39,29 @@ Large cargo ships pick up at mining hubs and deliver to production facility (req
 
 ## <span id="SE-todo">ToDo</span>
 
--   Mines:
+-   ### **Mines:**
     -   **Platinum\***
     -   Uranium \[1]
     -   Gold
     -   Silver
     -   Cobalt
--   CommsRelay Station
+-   ### **CommsRelay Station**
     -   Laser Antennae connected to orbital stations at each planet
--   Grid Networking
+-   ### **Grid Networking**
     -   Build Remote Control blocks on all grids and name them appropriately (Remote Control - \<Grid Name\>)
--   Salvage space station (SalvageStation01)
+-   ### **Salvage space station (SalvageStation01)**
     -   ~~Located adjacent to SpaceStation01~~ ***with small cargo shuttle between***
     -   ~~Large docking area for collected salvage~~
     -   ~~Grinder ship~~s
     -   ~~Collection cargo containers~~
     -   ~~Dock for componant hauler~~
     -   ~~Cargo "buddy" to drain salvage of Hydrogen, Oxygen, and any scrap componants including ammo~~
--   Moon Mining Hub (MoonStation01 - not exists)
+-   ### **Moon Mining Hub (MoonStation01 - not exists)**
     -   Large collection space
     -   Storage area
     -   O2/H2 Generators (10)
     -   Hydrogen Engines
--   Moon Station (MoonStation02)
+-   ### **Moon Station (MoonStation02)**
     -   ~~Power room with Hydro generators~~ and batteries (NO REACTORS)
     -   Medical room with cryo pod
     -   Control room with LCD panels, programming blocks, and timers; ***might be big***.
@@ -71,7 +71,7 @@ Large cargo ships pick up at mining hubs and deliver to production facility (req
         -   Timers:
             -   Doors: 
     -   ~~Air Traffic Control tower with control seats and LCD panels~~
--   ~~Production Facility~~ (ProductionStation)
+-   ### **~~Production Facility~~ (ProductionStation)**
     -   **Name:** ProductionStation
     -   **Remote Control:** Remote Control - ProductionStation (notexists)
     -   GPS:
@@ -84,7 +84,7 @@ Large cargo ships pick up at mining hubs and deliver to production facility (req
     -   Refineries (x24; 2x Power Module, 2x Yield Module each)
     -   Assemblers (x24; 2x Power Module, 2x Speed Module each)
     -   Storage (x144; Large Industrial Cargo Container)
--   ~~Mining Carrier~~
+-   ### **~~Mining Carrier~~**
     -   **Name:** CVU-###
     -   **Blueprint:** M80 Mining Carrier
     -   Has:
@@ -96,7 +96,7 @@ Large cargo ships pick up at mining hubs and deliver to production facility (req
         -   Enough batteries for full systems usage plus drone charging
         -   Cold start reactor
         -   
--   ~~Mining Drones~~ 
+-   ### **Mining Drones**
     -   **Name:** MD-###
     -   **Blueprint:** M80 Hydro Mining Ship
     -   ~~Rebrand existing PAM drone with M80 colors~~
